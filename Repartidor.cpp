@@ -38,6 +38,18 @@ int Repartidor::get_num_amonesta() {
 
 //Methods
 
+void Repartidor::set_estado_pedido(string estado){
+	
+	p1->set_estado(estado);
+	
+}
+
+string Repartidor::get_estado_pedido(){
+	
+	return p1->get_estado();
+	
+}
+
 string Repartidor::tostringRepa() {
 	
 	stringstream x;

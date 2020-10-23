@@ -1,6 +1,5 @@
 #ifndef PEDIDO_H
 #define PEDIDO_H
-
 #include <iostream>
 #include <sstream>
 
@@ -10,7 +9,8 @@ class Pedido {
 	
 private:
 	
-	static int num_pedido;
+	static int num_pedido; //static
+	
 	string estado;
 	int id;
 	double precio;

@@ -16,6 +16,7 @@ private:
 	string direcc;
 	string tipo_comida;
 	int cant_pedidos;
+	double total;
 	double combos[z];
 	
 public:

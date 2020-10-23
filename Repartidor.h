@@ -1,6 +1,7 @@
 #ifndef REPARTIDOR_H
 #define REPARTIDOR_H
 #include "Persona.h"
+#include "Pedido.h"
 
 //#include "Pedido.h"   para hacer set al estado del pedido
 
@@ -13,6 +14,8 @@ private:
 	
 	float num_kms_diario;
 	int num_amonesta;
+	
+	Pedido *p1;
 	
 public:
 	
@@ -28,6 +31,11 @@ public:
 	
 	float get_num_kms_diario();
 	int get_num_amonesta();
+	
+	//methods
+	
+	void set_estado_pedido(string pedido);
+	string get_estado_pedido();
 	
 	//tostring
 	

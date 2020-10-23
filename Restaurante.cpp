@@ -7,6 +7,7 @@ Restaurante::Restaurante(string nombre, string ced_juridica, string direcc, stri
 	this->direcc = direcc;
 	this->tipo_comida = tipo_comida;
 	this->cant_pedidos = cant_pedidos;
+	this->total = 0;
 	
 	double x = 4000.00;
 	
