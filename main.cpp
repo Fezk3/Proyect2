@@ -29,13 +29,11 @@ int main() {
 	
 	lispe->agregar_pedido(ped1);
 	lispe->mostrar_pedidos();
-	
-	/*
+
 	
 	Restaurante* r1 = new Restaurante("uwu", "as1f", "Palmares", "japonesa", 5);
 	cout<<r1->tostringRest();
 	
-	*/
 	
 	return 0;
 	
