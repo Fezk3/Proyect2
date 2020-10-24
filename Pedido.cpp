@@ -1,8 +1,10 @@
 #include "Pedido.h"
 
+int Pedido::num = 0;
+
 Pedido::Pedido(string estado, double precio, string hora_inicio, string hora_final) {
 	
-	int num_pedido = 1;
+	int num_pedido = num;
 	
 	this->estado = estado;
 	this->id = num_pedido;
@@ -10,7 +12,7 @@ Pedido::Pedido(string estado, double precio, string hora_inicio, string hora_fin
 	this->hora_inicio = hora_inicio;
 	this->hora_final = hora_final;
 	
-	num_pedido ++;
+	num ++;
 	
 }
 
