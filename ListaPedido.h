@@ -18,6 +18,7 @@ public:
 	void agregar_pedido(Pedido *pedido);
 	bool eliminar_pedido();
 	void mostrar_pedidos();
+	void hora_pico();
 	
 };
 

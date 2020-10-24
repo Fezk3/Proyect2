@@ -69,3 +69,29 @@ void ListaPedido::mostrar_pedidos() {
 	}
 	
 }
+
+void ListaPedido::hora_pico(){
+	
+	NodoPedido *aux = head;
+	double h_pico = 0;
+	int cont = 0;
+	
+	if(aux!=NULL){
+		
+		cout<<"Lista de Pedidos vacia"<<endl;
+		
+	}else{
+		
+		while(aux!=NULL){
+			
+			//h_pico += aux->get_pedido()->get_hora_ini();
+			cont++;
+			aux = aux->get_sig_pedido();
+			
+		}
+		
+	}
+	
+	cout<<"La hora en la que se realizan mas pedidos es: "<<h_pico/cont<<endl; 
+	
+}

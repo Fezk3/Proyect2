@@ -50,9 +50,9 @@ void Restaurante::set_tipo_comida(string tipo_comida) {
 	
 }
 
-void Restaurante::set_cant_pedidos(int cant_pedidos) {
+void Restaurante::set_cant_pedidos() {
 	
-	this->cant_pedidos = cant_pedidos;
+	this->cant_pedidos+=1;
 	
 }
 
