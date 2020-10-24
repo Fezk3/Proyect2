@@ -19,6 +19,7 @@ void ListaClientes::Agregar(Cliente *ClienteN){
 	}
 	
 }
+/*
 void ListaClientes::Imprimir(){
 	
 	NodoCliente *Aux = Head;
@@ -35,6 +36,7 @@ void ListaClientes::Imprimir(){
 		}
 	}
 }
+*/
 bool ListaClientes::BuscarCliente(string Ced){
 	
 	NodoCliente* Aux = Head;
@@ -62,5 +64,88 @@ ListaClientes::~ListaClientes() {
 		Head=Head->get_siguiente();
 		delete Borrar;
 	}
+	
+}
+
+void ListaClientes::clientes_acti(){
+	
+	NodoCliente *aux = Head;
+	
+	if(aux == NULL){
+		
+		cout<<"No hay clientes activos"<<endl;
+		
+	}else{
+		
+		while(aux!=NULL){
+			
+			if(aux->get_cliente()->get_estado()==true){
+				
+				cout<<aux->get_cliente()->TostringPer()<<endl;
+				//aux = aux->get_siguiente();
+				
+			}
+			
+			aux = aux->get_siguiente();
+			
+		}
+		
+		
+	}
+	
+}
+
+void ListaClientes::clientes_suspen(){
+	
+	NodoCliente *aux = Head;
+	
+	if(aux == NULL){
+		
+		cout<<"No hay clientes activos"<<endl;
+		
+	}else{
+		
+		while(aux!=NULL){
+			
+			if(aux->get_cliente()->get_estado()==false){
+				
+				cout<<aux->get_cliente()->TostringPer()<<endl;
+				//aux = aux->get_siguiente();
+				
+			}
+			
+			aux = aux->get_siguiente();
+			
+		}
+		
+		
+	}
+	
+}
+
+bool ListaClientes::checkC(string num_ced){  //if false -> agregar, else -> continue
+	
+	NodoCliente *aux = Head;
+	
+	if(aux == NULL){
+		
+		cout<<"La lista esta vacia"<<endl;
+		return false;
+		
+	}else{
+		
+		while(aux!=NULL){
+			
+			if(aux->get_cliente()->get_cedula() == num_ced){
+				
+				return true;
+				
+			}
+			
+		}
+		
+	}
+	
+	return false;
 	
 }

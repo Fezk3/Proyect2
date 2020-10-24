@@ -31,6 +31,7 @@ public:
 	void set_direcc(string direcc);
 	void set_tipo_comida(string tipo_comida);
 	void set_cant_pedidos(int cant_pedidos);
+	void set_total(double total);
 	
 	//gets
 	
@@ -39,6 +40,7 @@ public:
 	string get_direcc();
 	string get_tipo_comida();
 	int get_cant_pedidos();
+	double get_total();
 	
 	//methods
 	

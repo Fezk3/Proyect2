@@ -56,6 +56,12 @@ void Restaurante::set_cant_pedidos(int cant_pedidos) {
 	
 }
 
+void Restaurante::set_total(double total){
+	
+	this->total=total;
+	
+}
+
 //gets
 
 string Restaurante::get_nombre() {
@@ -88,6 +94,12 @@ int Restaurante::get_cant_pedidos() {
 	
 }
 
+double Restaurante::get_total(){
+	
+	return total;
+	
+}
+
 //methods
 
 string Restaurante::tostringRest() {
@@ -99,6 +111,7 @@ string Restaurante::tostringRest() {
 	x << "Direccion: " << get_direcc() << endl;
 	x << "Tipo de comida: " << get_tipo_comida() << "\n\n";
 	
+	/*
 	x << "Combos: " << "\n\n";
 	
 	for (int i = 0;i < 9;i++) {
@@ -106,6 +119,7 @@ string Restaurante::tostringRest() {
 		x << "Combo: " << i + 1 << "	 Precio: " << combos[i] << endl;
 		
 	}
+	*/
 	
 	return x.str();
 	

@@ -109,10 +109,17 @@ void ListaReparti::mostrarlistaR() {
 	}
 	else {
 		
+		cout<<"Repartidores con 0 amonestacions: "<<endl;
 		
 		while (aux != NULL) {
 			
-			cout << aux->get_dato()->tostringRepa() << endl;  //lamando al tostring del repartidor de dicho nodo
+			if(aux->get_dato()->get_num_amonesta()==0){
+				
+				cout << aux->get_dato()->tostringRepa() << endl;  //lamando al tostring del repartidor de dicho nodo
+				//aux = aux->get_sig();
+				
+			}
+			
 			aux = aux->get_sig();
 			
 		}
@@ -120,3 +127,31 @@ void ListaReparti::mostrarlistaR() {
 	}
 	
 }
+
+bool ListaReparti::checkR(string num_ced){  //checks si el repartidor esta en la ListaReparti, si false llamar agragar else continua
+	
+	NodoReparti *aux = ini;
+	
+	if(aux==NULL){
+		
+		cout<<"La lista de Repatidores esta vacia"<<endl;
+		return false;
+		
+	}else{
+		
+		while(aux!=NULL){
+			
+			if(aux->get_dato()->get_cedula() == num_ced){
+				
+				return true;
+				
+			}
+			
+		}
+		
+	}
+	
+	return false;
+	
+}
+

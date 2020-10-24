@@ -20,6 +20,7 @@ public:
 	bool buscar_reparti();
 	void eliminar_reparti();
 	void mostrarlistaR();
+	bool checkR(string num_cedula);
 	
 };
 

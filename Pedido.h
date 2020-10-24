@@ -9,8 +9,6 @@ class Pedido {
 	
 private:
 	
-	static int num_pedido; //static
-	
 	string estado;
 	int id;
 	double precio;

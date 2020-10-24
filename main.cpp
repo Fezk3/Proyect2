@@ -36,6 +36,7 @@ int main() {
 	cout<<r1->tostringRest();
 	
 	*/
+	
 	return 0;
 	
 }

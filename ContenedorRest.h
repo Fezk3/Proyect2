@@ -17,8 +17,11 @@ public:
 	
 	//methods
 	
-	Restaurante menos_pedidos();
-	Restaurante mas_pedidos();
+	string  menos_pedidos();
+	string mas_pedidos();
+	string total_resta();
+	double total_all();
+	string listado_resta();
 	
 };
 
