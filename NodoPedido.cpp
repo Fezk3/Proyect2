@@ -20,7 +20,7 @@ void NodoPedido::set_pedido(Pedido* pedido) {
 }
 void NodoPedido::set_sig_pedido(NodoPedido* sigui_ped) {
 	
-	this->sigui_ped = NULL;
+	this->sigui_ped = sigui_ped;
 	
 }
 

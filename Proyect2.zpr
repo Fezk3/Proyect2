@@ -15,7 +15,7 @@ tab_width=4
 tab_use_spaces=0
 explorer_path=.
 inherits_from=
-current_source=ListaPedido.cpp
+current_source=Pedido.cpp
 path_char=\
 [source]
 path=main.cpp
@@ -27,7 +27,7 @@ cursor=34:21
 open=true
 [source]
 path=Restaurante.cpp
-cursor=121:3
+cursor=54:22
 open=true
 [source]
 path=persona.cpp
@@ -39,15 +39,15 @@ cursor=1:0
 open=true
 [source]
 path=ListaCliente.cpp
-cursor=150:1
+cursor=144:3
 open=true
 [source]
 path=ListaPedido.cpp
-cursor=0:0
+cursor=77:1
 open=true
 [source]
 path=ListaReparti.cpp
-cursor=140:0
+cursor=142:3
 open=true
 [source]
 path=NodoCliente.cpp
@@ -55,7 +55,7 @@ cursor=0:0
 open=true
 [source]
 path=NodoPedido.cpp
-cursor=0:0
+cursor=22:28
 open=true
 [source]
 path=NodoReparti.cpp
@@ -63,7 +63,7 @@ cursor=0:0
 open=true
 [source]
 path=Pedido.cpp
-cursor=10:31
+cursor=31:1
 open=true
 [source]
 path=ContenedorRest.cpp
@@ -75,7 +75,7 @@ cursor=17:12
 open=true
 [header]
 path=Restaurante.h
-cursor=42:20
+cursor=32:23
 open=true
 [header]
 path=persona.h
@@ -91,7 +91,7 @@ cursor=21:24
 open=true
 [header]
 path=ListaPedido.h
-cursor=22:0
+cursor=20:18
 open=true
 [header]
 path=ListaReparti.h
@@ -111,7 +111,7 @@ cursor=0:0
 open=true
 [header]
 path=Pedido.h
-cursor=10:1
+cursor=13:8
 open=true
 [header]
 path=ContenedorRest.h

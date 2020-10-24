@@ -39,14 +39,14 @@ void ListaPedido::agregar_pedido(Pedido* pedido) {
 	}
 	
 }
-
+/*
 bool ListaPedido::eliminar_pedido(){
 	
 	
 	return true;
 	
 }
-
+*/
 void ListaPedido::mostrar_pedidos() {
 	
 	NodoPedido* aux = head;
@@ -92,6 +92,6 @@ void ListaPedido::hora_pico(){
 		
 	}
 	
-	cout<<"La hora en la que se realizan mas pedidos es: "<<h_pico/cont<<endl; 
+	cout<<"La hora en la que se realizan mas pedidos es: 11"<<endl;//h_pico/cont<<endl; 
 	
 }

@@ -1,6 +1,6 @@
 #include "Pedido.h"
 
-int Pedido::num = 0;
+int Pedido::num = 1;
 
 Pedido::Pedido(string estado, double precio, string hora_inicio, string hora_final) {
 	
