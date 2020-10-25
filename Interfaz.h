@@ -16,7 +16,7 @@ public:
 	ListaPedido* Pedidos;
 	ListaReparti* Repartidores;
 	Interfaz();
-	~Interfaz();
+	virtual ~Interfaz();
 	
 	/*void GuardaRestaurante();
 	void LeerRestaurante();*/

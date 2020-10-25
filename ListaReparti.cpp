@@ -29,7 +29,6 @@ void ListaReparti::agregar_reparti(Repartidor* repa) {
 	{
 		
 		ini = aux;
-		cout << repa->get_nombre() << " se ha agregado a la lista de repartidores\n";
 		
 	}
 	else
@@ -37,7 +36,6 @@ void ListaReparti::agregar_reparti(Repartidor* repa) {
 		
 		aux->set_sig(ini);
 		ini = aux;
-		cout << repa->get_nombre() << " se ha agregado a la lista de repartidores\n";
 		
 	}
 	

@@ -6,7 +6,8 @@ class Control{
 	
 public:
 	
-	void menu();
+	void menu_cliente();
+	void menu_repartidor();
 	
 };
 	

@@ -109,7 +109,3 @@ string ContenedorRest::listado_resta(){
 	return x.str();
 	
 }
-
-
-
-

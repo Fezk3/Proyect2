@@ -11,10 +11,6 @@ Interfaz::Interfaz() {
 
 Interfaz::~Interfaz() {
 	
-	delete Clientes;
-	delete Pedidos;
-	delete Repartidores;
-	
 }
 
 /*void Interfaz::GuardaRestaurante(){

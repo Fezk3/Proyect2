@@ -1,45 +1,40 @@
 #include "Control.h"
 
-void Control::menu(){
+void Control::menu_cliente(){
+
 	
-	cout<<"Menu KFC: "<<endl;
-	cout<<"Combo 1: 10 Alitas              Precio: 4000.00"<<endl;
-	cout<<"Combo 2: Pollo porcion          Precio: 5000.00"<<endl;
-	cout<<"Combo 3: Pollo con papas        Precio: 6000.00"<<endl;
-	cout<<"Combo 4: Porcion con papas      Precio: 7000.00"<<endl;
-	cout<<"Combo 5: Porcion con refreco    Precio: 8000.00"<<endl;
-	cout<<"Combo 6: 3 Piezas con papas     Precio: 9000.00"<<endl;
-	cout<<"Combo 7: 3 Piezas con refresco  Precio: 10000.00"<<endl;
-	cout<<"Combo 8: Porcion con pure       Precio: 11000.00"<<endl;
-	cout<<"Combo 9: Almuerzo familiar      Precio: 12000.00"<<endl;
 	
-	//**************************************************************
+}
+
+void Control::menu_repartidor(){
 	
-	cout<<"Menu Dominos: "<<endl;
-	cout<<"Combo 1: Pizza pequnia              Precio: 4000.00"<<endl;
-	cout<<"Combo 2: Pizza pequenia suprema     Precio: 5000.00"<<endl;
-	cout<<"Combo 3: Pizza mediana              Precio: 6000.00"<<endl;
-	cout<<"Combo 4: Pizza mediana suprema      Precio: 7000.00"<<endl;
-	cout<<"Combo 5: Pizza grande               Precio: 8000.00"<<endl;
-	cout<<"Combo 6: Pizza grande suprema       Precio: 9000.00"<<endl;
-	cout<<"Combo 7: Pizza familiar             Precio: 10000.00"<<endl;
-	cout<<"Combo 8: Pizza familiar suprema     Precio: 11000.00"<<endl;
-	cout<<"Combo 9: 2 Pizzas grandes           Precio: 12000.00"<<endl;
+	Repartidor* rep1 = new Repartidor("Victor", "4654564", 24586, "5asd4", true, "vict@gmail.com", "Palmares", 7.3, 0);
+	Repartidor* rep2 = new Repartidor("Kevin", "465454", 34586, "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
+	Repartidor* rep3 = new Repartidor("Warner", "4gseg564", 14586, "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
 	
-	//*************************************************************
+	ListaReparti* listaRep = new ListaReparti;
 	
-	cout<<"Menu Wendy's: "<<endl;
-	cout<<"Combo 1: Hamburguesa pequenia       Precio: 4000.00"<<endl;
-	cout<<"Combo 2: Hamburguesa mediana        Precio: 5000.00"<<endl;
-	cout<<"Combo 3: Hamburguesa grande         Precio: 6000.00"<<endl;
-	cout<<"Combo 4: Hamburguesa y refresco     Precio: 7000.00"<<endl;
-	cout<<"Combo 5: 2 hamburguesas pequenias   Precio: 8000.00"<<endl;
-	cout<<"Combo 6: 2 hamburguesas medianas    Precio: 9000.00"<<endl;
-	cout<<"Combo 7: 2 hamburguesas grandes     Precio: 10000.00"<<endl;
-	cout<<"Combo 8: 4 hamburguesas pequenias   Precio: 11000.00"<<endl;
-	cout<<"Combo 9: 3 hamburguesas medianas    Precio: 12000.00"<<endl;
+	listaRep->agregar_reparti(rep1);
+	listaRep->agregar_reparti(rep2);
+	listaRep->agregar_reparti(rep3);
+	listaRep->mostrarlistaR();
 	
-	//*************************************************************
+	listaRep->eliminar_reparti();
+	
+	cout << "Despues del borrado" << endl;
+	
+	listaRep->mostrarlistaR();
+	
+	Pedido* ped1 = new Pedido("en camino", 2500, "1:20 pm", "1:45 pm");
+	
+	ListaPedido* lispe = new ListaPedido();
+	
+	cout << "Pedidos:" << endl;
+	
+	lispe->agregar_pedido(ped1);
+	lispe->mostrar_pedidos();
+	
+	delete rep1; delete rep2; delete rep3; delete listaRep; delete ped1; delete lispe;
 	
 	
 }

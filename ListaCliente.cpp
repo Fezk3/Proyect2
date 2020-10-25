@@ -11,11 +11,15 @@ void ListaClientes::Agregar(Cliente *ClienteN){
 	
 	if (Head==NULL)
 	{
+		
 		Head = Nuevo;
+		
 	}
 	else {
+		
 		Nuevo->set_siguiente(Head);
 		Head = Nuevo;
+		
 	}
 	
 }

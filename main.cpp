@@ -1,9 +1,28 @@
-#include "ListaReparti.h"
-#include "ListaPedido.h"
-#include "Restaurante.h"
+#include "Control.h"
 
 int main() {
 	
+	
+	int op;
+	
+	Control c1;
+	
+	cout<<"Digite que tipo de usuario es usted: "<<endl;
+	cout<<"1. Cliente"<<endl;
+	cout<<"2.Repartidor"<<endl;
+	cin>>op;
+	
+	if(op==1){
+		
+		c1.menu_cliente();
+		
+	}else{
+		
+		c1.menu_repartidor();
+		
+	}
+	
+	/*
 	Repartidor* rep1 = new Repartidor("Victor", "4654564", 24586, "5asd4", true, "vict@gmail.com", "Palmares", 7.3, 0);
 	Repartidor* rep2 = new Repartidor("Kevin", "465454", 34586, "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
 	Repartidor* rep3 = new Repartidor("Warner", "4gseg564", 14586, "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
@@ -29,7 +48,7 @@ int main() {
 	
 	lispe->agregar_pedido(ped1);
 	lispe->mostrar_pedidos();
-	
+	*/
 	/*
 	
 	Restaurante* r1 = new Restaurante("uwu", "as1f", "Palmares", "Rapida", 5);
