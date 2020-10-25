@@ -1,6 +1,5 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
-
 #include "persona.h"
 
 //falta pointer a pedido
@@ -12,6 +11,14 @@ public:
 	
 	Cliente(string, string, int, string, bool, string, string);
 	~Cliente();
+	
+	//methods
+	
+	string TostringCliente();
+	
+	
+private:
+	int Num_Pedidos;
 	
 };
 
