@@ -1,6 +1,6 @@
 #ifndef LISTAREPARTI_H
 #define LISTAREPARTI_H
-
+#include <fstream>
 #include "NodoReparti.h"
 
 class ListaReparti {
@@ -21,6 +21,9 @@ public:
 	void eliminar_reparti();
 	void mostrarlistaR();
 	bool checkR(string num_cedula);
+	NodoReparti *get_ini();
+	void queja(string,string);
+	void leer_queja(string);
 	
 };
 
