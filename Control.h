@@ -6,7 +6,7 @@ class Control{
 	
 public:
 	
-	void menu;
+	void menu();
 	
 };
 	
