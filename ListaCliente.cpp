@@ -149,3 +149,9 @@ bool ListaClientes::checkC(string num_ced){  //if false -> agregar, else -> cont
 	return false;
 	
 }
+
+NodoCliente *ListaClientes::get_head(){
+	
+	return Head;
+	
+}

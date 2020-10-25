@@ -13,13 +13,16 @@ public:
 	
 	ListaClientes();
 	void Agregar(Cliente* Nuevo);
+	
 	//void Imprimir();
+	
 	bool BuscarCliente(string);
 	virtual ~ListaClientes();
 	void clientes_acti();
 	void clientes_suspen();
 	bool checkC(string);
 	void cliente_maspedi();
+	NodoCliente *get_head();
 	
 };
 
