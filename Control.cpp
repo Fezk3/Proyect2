@@ -29,15 +29,15 @@ void Control::menu(){
 	//*************************************************************
 	
 	cout<<"Menu Wendy's: "<<endl;
-	cout<<"Combo 1: 10 Alitas              Precio: 4000.00"<<endl;
-	cout<<"Combo 2: Pollo porcion          Precio: 5000.00"<<endl;
-	cout<<"Combo 3: Pollo con papas        Precio: 6000.00"<<endl;
-	cout<<"Combo 4: Porcion con papas      Precio: 7000.00"<<endl;
-	cout<<"Combo 5: Porcion con refreco    Precio: 8000.00"<<endl;
-	cout<<"Combo 6: 3 Piezas con papas     Precio: 9000.00"<<endl;
-	cout<<"Combo 7: 3 Piezas con refresco  Precio: 10000.00"<<endl;
-	cout<<"Combo 8: Porcion con pure       Precio: 11000.00"<<endl;
-	cout<<"Combo 9: Almuerzo familiar      Precio: 12000.00"<<endl;
+	cout<<"Combo 1: Hamburguesa pequenia       Precio: 4000.00"<<endl;
+	cout<<"Combo 2: Hamburguesa mediana        Precio: 5000.00"<<endl;
+	cout<<"Combo 3: Hamburguesa grande         Precio: 6000.00"<<endl;
+	cout<<"Combo 4: Hamburguesa y refresco     Precio: 7000.00"<<endl;
+	cout<<"Combo 5: 2 hamburguesas pequenias   Precio: 8000.00"<<endl;
+	cout<<"Combo 6: 2 hamburguesas medianas    Precio: 9000.00"<<endl;
+	cout<<"Combo 7: 2 hamburguesas grandes     Precio: 10000.00"<<endl;
+	cout<<"Combo 8: 4 hamburguesas pequenias   Precio: 11000.00"<<endl;
+	cout<<"Combo 9: 3 hamburguesas medianas    Precio: 12000.00"<<endl;
 	
 	//*************************************************************
 	
