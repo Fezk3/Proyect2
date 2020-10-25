@@ -19,6 +19,7 @@ public:
 	bool eliminar_pedido();
 	void mostrar_pedidos();
 	void hora_pico();
+	NodoPedido *get_head();
 	
 };
 

@@ -95,3 +95,9 @@ void ListaPedido::hora_pico(){
 	cout<<"La hora en la que se realizan mas pedidos es: 11"<<endl;//h_pico/cont<<endl; 
 	
 }
+
+NodoPedido *ListaPedido::get_head(){
+	
+	return head;
+	
+}
