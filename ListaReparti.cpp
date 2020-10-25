@@ -157,17 +157,17 @@ bool ListaReparti::checkR(string num_ced){  //checks si el repartidor esta en la
 
 void ListaReparti::queja(string id, string recla){
 	
-	ofstream recla("./Quejas/"+ID+".txt",ios::app); 
+	ofstream reclamo("./Quejas/"+id+".txt",ios::app); 
 	
-	if(recla.fail()){
+	if(reclamo.fail()){
 		cout<<"Error\n";
 		exit(1);
 	}
-	if(recla.good()){
-		recla<<"-"<<Recla<<"\n\n";
+	if(reclamo.good()){
+		reclamo<<'-'<<recla<<"\n\n";
 	}
 	
-	recla.close();
+	reclamo.close();
 	
 }
 
@@ -175,7 +175,7 @@ void ListaReparti::leer_queja(string id){
 	
 	string impri;
 	
-	ifstream reclamo("./Quejas/"+ID+".txt",ios::in);
+	ifstream reclamo("./Quejas/"+id+".txt",ios::in);
 	
 	while(!reclamo.eof()){
 		

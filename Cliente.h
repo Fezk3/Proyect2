@@ -14,6 +14,8 @@ public:
 	
 	//methods
 	
+	void Aumentar();
+	int getNum_Pedidos();
 	string TostringCliente();
 	
 	
