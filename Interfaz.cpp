@@ -13,7 +13,8 @@ Interfaz::~Interfaz() {
 	
 }
 
-/*void Interfaz::GuardaRestaurante(){
+/*
+void Interfaz::GuardaRestaurante(){
 
 string Escribir;
 
@@ -45,7 +46,9 @@ cout<<Escribir;
 
 Resta.close();
 
-}*/
+}
+*/
+
 void Interfaz::GuardaRepartidores(){
 	
 	NodoReparti *Aux = Repartidores->get_ini();
