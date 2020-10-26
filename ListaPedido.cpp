@@ -73,7 +73,7 @@ void ListaPedido::mostrar_pedidos() {
 void ListaPedido::hora_pico(){
 	
 	NodoPedido *aux = head;
-	double h_pico = 0;
+	double h_pico = 11;
 	int cont = 0;
 	
 	if(aux!=NULL){
@@ -92,7 +92,7 @@ void ListaPedido::hora_pico(){
 		
 	}
 	
-	cout<<"La hora en la que se realizan mas pedidos es: 11"<<endl;//h_pico/cont<<endl; 
+	cout<<"La hora en la que se realizan mas pedidos es: "<hora_pico<<<endl;//h_pico/cont<<endl; 
 	
 }
 

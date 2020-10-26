@@ -5,7 +5,7 @@
 
 using namespace std;
 
-const int z = 9;
+//const int z = 9;
 
 class Restaurante {
 	
@@ -17,7 +17,7 @@ private:
 	string tipo_comida;
 	int cant_pedidos;
 	double total;
-	double combos[z];
+	//double combos[z];
 	
 public:
 	

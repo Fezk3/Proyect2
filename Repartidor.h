@@ -14,7 +14,6 @@ private:
 	
 	float num_kms_diario;
 	int num_amonesta;
-	
 	Pedido *p1;
 	
 public:
@@ -34,7 +33,7 @@ public:
 	
 	//methods
 	
-	void set_estado_pedido(string pedido);
+	void set_estado_pedido(Pedido *pedido);
 	string get_estado_pedido();
 	
 	//tostring

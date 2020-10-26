@@ -2,6 +2,7 @@
 #define PEDIDO_H
 #include <iostream>
 #include <sstream>
+#include "Repartidor.h"
 
 using namespace std;
 
@@ -9,6 +10,7 @@ class Pedido {
 	
 private:
 	
+	Repartidor* r1;
 	static int num;
 	string estado;
 	int id;
@@ -39,6 +41,7 @@ public:
 	
 	//methods
 	
+	void get_info_repa(Repartidor *r);
 	string tostring_pedido();
 	
 };

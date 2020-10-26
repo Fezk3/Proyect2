@@ -77,7 +77,13 @@ string Pedido::get_hora_fin() {
 
 //Methods
 
-string Pedido::tostring_pedido() {
+void Pedido::get_info_repa(Repartidor *r){  //obtiene el repepartidor que acepta hacer el pedido 
+	
+	this->r1 = r;
+	
+}
+
+string Pedido::tostring_pedido(string combo) {  //concatenar el combo en main y enviarlo
 	
 	stringstream x;
 	
@@ -85,6 +91,12 @@ string Pedido::tostring_pedido() {
 	x << "Estado: " << get_estado() << endl;
 	x << "Hora de preparacion: " << get_hora_ini() << endl;
 	x << "Hora de entrega: " << get_hora_fin() << endl;
+	
+	x<<"\nNombre del repartidor de su pedido: \n"<<r1->get_nombre()<<endl;
+	
+	x<<"\nSu pedido es: "<<endl;
+	x<<combo<<endl;
+	x<<"Total de su compra: "<<<<;  //
 	
 	return x.str();
 	
