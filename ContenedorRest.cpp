@@ -109,3 +109,17 @@ string ContenedorRest::listado_resta(){
 	return x.str();
 	
 }
+
+string ContenedorRest::mostrar_lista(){
+	
+	stringstream x;
+	
+	for(int i=0;i<7;i++){
+		
+		x<<"Restaurante: "<<contenedor[i]->get_nombre()<<"		Tipo de comida: "<<contenedor[i]->get_tipo_comida()<<endl;
+		
+	}
+	
+	return x.str();
+	
+}

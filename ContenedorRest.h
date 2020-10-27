@@ -17,6 +17,7 @@ public:
 	
 	//methods
 	
+	string mostrar_lista();
 	string  menos_pedidos();
 	string mas_pedidos();
 	string total_resta();

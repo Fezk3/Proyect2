@@ -33,7 +33,7 @@ public:
 	
 	//methods
 	
-	void set_estado_pedido(Pedido *pedido);
+	void set_estado_pedido(string estado);
 	string get_estado_pedido();
 	
 	//tostring
