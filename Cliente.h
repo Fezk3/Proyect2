@@ -9,7 +9,7 @@ class Cliente : public Persona
 	
 public:
 	
-	Cliente(string, string, int, string, bool, string, string);
+	Cliente(string, string, int, string, bool, string, string,int);
 	~Cliente();
 	
 	//methods
