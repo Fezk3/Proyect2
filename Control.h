@@ -7,6 +7,7 @@ class Control{
 	
 public:
 	
+	void full();
 	void menu_cliente();
 	void menu_repartidor();
 	

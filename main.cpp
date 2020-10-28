@@ -2,7 +2,6 @@
 
 int main() {
 	
-	
 	Control c1;
 	
 	string op="";

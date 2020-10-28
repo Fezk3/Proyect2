@@ -6,13 +6,6 @@ ContenedorCombo::ContenedorCombo(Combo uno, Combo dos, Combo tres, Combo cua, Co
 	combos[1] = dos;	combos[4] = cinc;	combos[7] = och;
 	combos[2] = tres;	combos[5] = seis;	combos[8] = nue;
 	
-	/*
-	for(int i=0;i<9;i++){
-		
-		combos[i] = Combo();
-		
-	}
-	*/
 }
 
 ContenedorCombo::~ContenedorCombo(){

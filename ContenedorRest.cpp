@@ -2,12 +2,6 @@
 
 ContenedorRest::ContenedorRest(){
 	
-	/*for(int i=0;i<7;i++){
-		
-		contenedor = new Restaurante();
-		
-	}*/
-	
 	contenedor[0] = new Restaurante("KFC", "5466", "Heredia", "Rapida", 0);
 	contenedor[1] = new Restaurante("Wendy's", "1235", "Heredia", "Rapida", 0);
 	contenedor[2] = new Restaurante("Dominos", "6452", "Heredia", "Rapida", 0);
