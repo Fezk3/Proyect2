@@ -7,6 +7,13 @@ Combo::Combo(string nombre, double precio){
 	
 }
 
+Combo::Combo(){
+	
+	nombre = "uwu";
+	precio = 52.2;
+	
+}
+
 Combo::~Combo(){
 	
 }

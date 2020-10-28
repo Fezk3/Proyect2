@@ -2,17 +2,17 @@
 #define CONTENEDORCOMBO_H
 #include "Combo.h"
 
-const int x = 9;
+const int y = 9;
 
 class ContenedorCombo{
 	
 private:
 	
-	Combo *combos[x];
+	Combo combos[y];
 	
 public:
 	
-	ContenedorCombo(Combo *, Combo*, Combo*, Combo*, Combo*, Combo*, Combo*, Combo*, Combo*);
+	ContenedorCombo(Combo , Combo, Combo, Combo, Combo, Combo, Combo, Combo, Combo);
 	~ContenedorCombo();
 	
 	//methods

@@ -14,6 +14,7 @@ private:
 	
 public:
 	
+	Combo();
 	Combo(string nombre, double precio);
 	~Combo();
 	

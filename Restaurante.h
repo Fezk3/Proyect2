@@ -2,10 +2,9 @@
 #define RESTAURANTE_H
 #include <iostream>
 #include <sstream>
+#include "ContenedorCombo.h"
 
 using namespace std;
-
-//const int z = 9;
 
 class Restaurante {
 	
@@ -17,7 +16,6 @@ private:
 	string tipo_comida;
 	int cant_pedidos;
 	double total;
-	//double combos[z];
 	
 public:
 	

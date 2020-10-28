@@ -8,19 +8,7 @@ Restaurante::Restaurante(string nombre, string ced_juridica, string direcc, stri
 	this->tipo_comida = tipo_comida;
 	this->cant_pedidos = cant_pedidos;
 	this->total = 0;
-	
-	//mejor hacerlo desde el main y enviar con set
-	
-	/*
-	double x = 4000.00;
-	
-	for (int i = 0;i < 9;i++) {
-		
-		combos[i] = x;
-		x += 1000.00;
-		
-	}
-	*/
+
 }
 
 Restaurante::~Restaurante() {
