@@ -53,6 +53,7 @@ void Control::menu_cliente(){
 	Combo sieu("Super Bell", 10000); Combo ochuu("Mystery box", 11000); Combo nueu("WOMBO COMBO", 12000);
 	ContenedorCombo TB(unou, dosu, treu, cuatu, cincu, seiu, sieu, ochuu, nueu);
 	
+	//***********************************************************************************************************************************
 	
 	Interfaz* Contr = new Interfaz();
 	Cliente* Clien1 = new Cliente("Emanuel","402540125",89646441,"9999w",true,"Ema2821@gmail.com","Heredia",5);
@@ -66,7 +67,7 @@ void Control::menu_cliente(){
 	string verificar="";
 	string Nombre;
 	string Ced;
-	int NumTel;
+	//int NumTel;
 	string NumTarje;
 	string Correo;
 	string Ubica;

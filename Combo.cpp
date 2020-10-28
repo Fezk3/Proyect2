@@ -18,6 +18,18 @@ Combo::~Combo(){
 	
 }
 
+string Combo::get_nombre_combo(){
+	
+	return nombre;
+	
+}
+
+double Combo::get_precio(){
+	
+	return precio;
+	
+}
+
 //methods
 
 string Combo::tostring_combo(){

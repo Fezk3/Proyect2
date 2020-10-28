@@ -17,6 +17,8 @@ public:
 	Combo();
 	Combo(string nombre, double precio);
 	~Combo();
+	string get_nombre_combo();
+	double get_precio();
 	
 	//methods
 	
