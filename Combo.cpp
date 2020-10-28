@@ -1,6 +1,6 @@
 #include "Combo.h"
 
-Combo::Combo(stirng nombre, double float){
+Combo::Combo(string nombre, double precio){
 	
 	this->nombre = nombre;
 	this->precio = precio;
