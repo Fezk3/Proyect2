@@ -109,9 +109,7 @@ void Control::menu_cliente(){
 								switch(stoi(supmenus)){
 								case 1:
 									do{
-										cout<<" 1. Una alita  2000\n";
-										cout<<" 2. Dos Alitas  3000\n";
-										cout<<" 3. Salir\n";
+										cout<<KFC.tostring_contene_combo();
 										cout<<"Opcion: ";
 										cin>>combos;
 										try{
@@ -120,14 +118,25 @@ void Control::menu_cliente(){
 											}else{
 												switch(stoi(combos)){
 												case 1:
-													Pedido.append("Combo #1 Alitas  2000\n");
-													total+=2000;
+													Pedido.append(KFC.combos[0].tostring_combo());
+													total+=KFC.combos[0].get_precio();
 													break;
 												case 2:
 													Pedido.append("Combo #2 Alitas  3000\n");
 													total+=3000;
 													break;
-												case 3:
+												case 2:
+													Pedido.append("Combo #2 Alitas  3000\n");
+													total+=3000;
+													break;
+												case 2:
+													Pedido.append("Combo #2 Alitas  3000\n");
+													total+=3000;
+													break;
+												case 2:
+													Pedido.append("Combo #2 Alitas  3000\n");
+													total+=3000;
+													break;case 10:
 													Finalizar=1;
 													cout<<Pedido<<"\n";
 													cout<<total*1.13<<"\n";

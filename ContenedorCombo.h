@@ -6,13 +6,10 @@ const int y = 9;
 
 class ContenedorCombo{
 	
-private:
-	
-	Combo combos[y];
-	
 public:
 	
 	ContenedorCombo(Combo , Combo, Combo, Combo, Combo, Combo, Combo, Combo, Combo);
+	Combo combos[y];
 	~ContenedorCombo();
 	
 	//methods

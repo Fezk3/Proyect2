@@ -14,7 +14,7 @@ int main() {
 			cout<<"2. Repartidor"<<endl;
 			cout<<"3. Salir\n";
 			cin>>op;
-			if(op!="1"&&op!="2"&&op!="3"&&op!="1234"){
+			if(op!="1"&&op!="2"&&op!="3"){
 				throw op;
 			}else{
 				switch(stoi(op)){
@@ -35,12 +35,6 @@ int main() {
 					Sleep(3600);
 					exit(0);
 					break;
-					/*case 1234:
-					system("cls");
-					cout<<"Abriendo el menu de Repartidores...\n";
-					Sleep(3600);
-					c1.menu_Pruevas();
-					break;*/
 				}
 			}
 		}
