@@ -1114,7 +1114,96 @@ void Control::menu_cliente(){
 
 void Control::menu_repartidor(){
 	
+	string op;	
+	Interfaz* Rep = new Interfaz();
 	
+	//variables para Repartidor
+	
+	string id; string nombre; int num_tel; string tarje; string direc; string correo;
+	
+	float kilo = 0;
+	int amonesta = 0;
+	bool est = false;
+	
+	Repartidor* rep1 = new Repartidor("Victor", "4654564", 24586, "5asd4", true, "vict@gmail.com", "Palmares", 7.3, 0);
+	Repartidor* rep2 = new Repartidor("Kevin", "465454", 34586, "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
+	Repartidor* rep3 = new Repartidor("Warner", "4gseg564", 14586, "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
+	
+	
+	// agregando repartidores a la lista
+	
+	Rep->Repartidores->agregar_reparti(rep1);
+	Rep->Repartidores->agregar_reparti(rep2);
+	Rep->Repartidores->agregar_reparti(rep3);
+	
+	cout<<"Bienvenido a CletaEats: "<<endl;
+	
+	
+	do{
+		
+		cout<<"Digite su ID: "<<endl;
+		cin>>id;
+		
+		//SI EL REPARTIDOR NO EXISTE AGREGAR A LISTA
+		
+		if(Rep->Repartidores->checkR(id)==false){
+			
+			cout<<"Usted aun no esta registrado en la app, desea registrarse?"<<endl;
+			cout<<"Digite 1 para registrarse o 2 para salir"<<endl;
+			cin>>op;
+			
+			try{
+				
+				if(op!="1"||op!="2"){
+					
+					throw op;
+					
+				}else{
+					
+					if(op=="1"){  //Pidiendo info del repartidor NUEVO
+						
+						cout<<"Escriba su id: "<<endl;
+						cin>>id;
+						cout<<"Escriba su nombre: "<<endl;
+						cin>>nombre;
+						cout<<"Escriba su numero de telefono: "<<endl;
+						cin>>num_tel;
+						cout<<"Escriba su numero de tarjeta: "<<endl;
+						cin>>tarje;
+						cout<<"Escriba su direccion: "<<endl;
+						cin>>direc;
+						cout<<"Escriba su correo electronico: "<<endl;
+						cin>>correo;
+						
+						//creando objeto Repartidor en ejecucion y agregando a lista
+						
+						Repartidor *r1 = new Repartidor(nombre, id, num_tel, tarje, est, correo, direc, kilo, amonesta); 
+						Rep->Repartidores->agregar_reparti(r1);
+						
+					}else{
+						
+						break;
+						
+					}
+					
+				}
+				
+			}catch(string op){
+				
+				cout<<"Opcion invalida"<<endl;
+				
+			}
+			
+		}else{  //SI EL REPARTIDOR EXISTE
+			
+			cout<<"Bienvenido de nuevo: "<<endl;
+			
+			
+			
+		}
+		
+		
+	} while(true);
 	
 	
 }
