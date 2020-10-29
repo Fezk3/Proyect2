@@ -16,6 +16,7 @@ public:
 	
 	//Methods
 	
+	Repartidor *userR(string id);
 	void agregar_reparti(Repartidor* repa);
 	bool buscar_reparti();
 	void eliminar_reparti();

@@ -191,3 +191,21 @@ NodoReparti *ListaReparti::get_ini(){
 	return ini;
 	
 }
+
+Repartidor *ListaReparti::userR(string id){ 
+	
+	NodoReparti *aux = ini;
+
+	while(aux!=NULL){
+		
+		if(aux->get_dato()->get_cedula()==id){
+			
+			return aux->get_dato();
+			
+		}
+		
+		aux = aux->get_sig();
+		
+	}
+	
+}

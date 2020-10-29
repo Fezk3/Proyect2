@@ -16,6 +16,7 @@ public:
 	
 	//void Imprimir();
 	
+	Cliente *user(string id);
 	bool BuscarCliente(string);
 	virtual ~ListaClientes();
 	void clientes_acti();

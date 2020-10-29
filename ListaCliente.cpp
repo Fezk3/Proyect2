@@ -159,3 +159,21 @@ NodoCliente *ListaClientes::get_head(){
 	return Head;
 	
 }
+
+Cliente *ListaClientes::user(string id){ 
+	
+	NodoCliente *aux = Head;
+	
+	while(aux!=NULL){
+		
+		if(aux->get_cliente()->get_cedula()==id){
+			
+			return aux->get_cliente();
+			
+		}
+		
+		aux = aux->get_siguiente();
+		
+	}
+	
+}

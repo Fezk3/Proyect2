@@ -1205,5 +1205,6 @@ void Control::menu_repartidor(){
 		
 	} while(true);
 	
+	//delete r1;
 	
 }
