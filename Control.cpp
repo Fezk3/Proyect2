@@ -1119,15 +1119,15 @@ void Control::menu_repartidor(){
 	
 	//variables para Repartidor
 	
-	string id; string nombre; int num_tel; string tarje; string direc; string correo;
+	string id; string nombre; string num_tel; string tarje; string direc; string correo;
 	
 	float kilo = 0;
 	int amonesta = 0;
 	bool est = false;
 	
-	Repartidor* rep1 = new Repartidor("Victor", "4654564", 24586, "5asd4", true, "vict@gmail.com", "Palmares", 7.3, 0);
-	Repartidor* rep2 = new Repartidor("Kevin", "465454", 34586, "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
-	Repartidor* rep3 = new Repartidor("Warner", "4gseg564", 14586, "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
+	Repartidor* rep1 = new Repartidor("Victor", "4654564", "24586", "5asd4", true, "vict@gmail.com", "Palmares", 7.3, 0);
+	Repartidor* rep2 = new Repartidor("Kevin", "465454", "34586", "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
+	Repartidor* rep3 = new Repartidor("Warner", "4gseg564", "14586", "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
 	
 	
 	// agregando repartidores a la lista
