@@ -12,19 +12,21 @@ private:
 	static int num;
 	string estado;
 	int id;
+	string contenido;
 	double precio;
 	string hora_inicio;
 	string hora_final;
 	
 public:
 	
-	Pedido(string, double, string, string);
+	Pedido(string, string, double, string, string);
 	~Pedido();
 	
 	//sets
 	
 	void set_estado(string estado);
 	void set_id(int id);
+	void set_contenido(string contenido);
 	void set_precio(double precio);
 	void set_hora_ini(string hora_inicio);
 	void set_hora_fin(string hora_final);
@@ -33,6 +35,7 @@ public:
 	
 	string get_estado();
 	int get_id();
+	string get_contenido();
 	double get_precio();
 	string get_hora_ini();
 	string get_hora_fin();

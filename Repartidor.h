@@ -18,7 +18,7 @@ private:
 	
 public:
 	
-	Repartidor(string nombre, string num_cedula, int num_tel, string num_tarje, bool estado, string correo, string direccion,float num_kms_diario, int num_amonesta);
+	Repartidor(string nombre, string num_cedula, string num_tel, string num_tarje, bool estado, string correo, string direccion,float num_kms_diario, int num_amonesta);
 	~Repartidor();
 	
 	//sets

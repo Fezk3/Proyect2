@@ -1,6 +1,6 @@
 #include "Repartidor.h"
 
-Repartidor::Repartidor(string nombre, string num_cedula, int num_tel, string num_tarje, bool estado, string correo, string direccion, float num_kms_diario, int num_amonesta) : Persona(nombre, num_cedula, num_tel,num_tarje, estado, correo, direccion) {
+Repartidor::Repartidor(string nombre, string num_cedula, string num_tel, string num_tarje, bool estado, string correo, string direccion, float num_kms_diario, int num_amonesta) : Persona(nombre, num_cedula, num_tel,num_tarje, estado, correo, direccion) {
 	
 	this->num_kms_diario = num_kms_diario;
 	this->num_amonesta = num_amonesta;

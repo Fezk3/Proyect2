@@ -12,7 +12,7 @@ private:
 	
 	string nombre;
 	string cedula;
-	int num_tel;
+	string num_tel;
 	string num_tarje;
 	bool estado;
 	string correo;
@@ -21,14 +21,14 @@ private:
 public:
 	
 	Persona();
-	Persona(string, string, int, string, bool, string, string);
+	Persona(string, string, string, string, bool, string, string);
 	~Persona();
 	
 	//sets
 	
 	void set_nombre(string nombre);
 	void set_cedula(string cedula);
-	void set_num_tel(int num_tel);
+	void set_num_tel(string num_tel);
 	void set_num_tarje(string num_tarje);
 	void set_estado(bool estado);
 	void set_correo(string correo);
@@ -38,7 +38,7 @@ public:
 	
 	string get_nombre();
 	string get_cedula();
-	int get_num_tel();
+	string get_num_tel();
 	string get_num_tarje();
 	bool get_estado();
 	string get_correo();

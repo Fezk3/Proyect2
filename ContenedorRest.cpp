@@ -2,7 +2,7 @@
 
 ContenedorRest::ContenedorRest(){
 	
-	contenedor[0] = new Restaurante("KFC", "5466", "Heredia", "Rapida", 0);
+	contenedor[0] = new Restaurante("Popeyes", "5466", "Heredia", "Rapida", 0);
 	contenedor[1] = new Restaurante("Wendy's", "1235", "Heredia", "Rapida", 0);
 	contenedor[2] = new Restaurante("Dominos", "6452", "Heredia", "Rapida", 0);
 	contenedor[3] = new Restaurante("Pizza Hut", "8764", "Heredia", "Rapida", 0);
@@ -110,7 +110,7 @@ string ContenedorRest::mostrar_lista(){
 	
 	for(int i=0;i<7;i++){
 		
-		x<<"Restaurante: "<<contenedor[i]->get_nombre()<<"		Tipo de comida: "<<contenedor[i]->get_tipo_comida()<<endl;
+		x<<i+1<<". "<<contenedor[i]->get_nombre()<<"		Tipo de comida: "<<contenedor[i]->get_tipo_comida()<<endl;
 		
 	}
 	

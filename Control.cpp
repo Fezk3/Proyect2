@@ -6,6 +6,7 @@ void Control::menu_cliente(){
 	
 	//KFC
 	
+
 	Combo uno("4 Alitas", 4000); Combo dos("6 Alitas", 5000); Combo tre("8 Alitas", 6000);
 	Combo cuat("Porc. Muslo", 7000); Combo cinc("Porc. Pechuga", 8000); Combo sei("Bucket de Alitas", 9000);
 	Combo sie("Bucket de Muslos", 10000); Combo och("Familiar #1", 11000); Combo nue("Familiar #2", 12000);
@@ -56,9 +57,9 @@ void Control::menu_cliente(){
 	//***********************************************************************************************************************************
 	
 	Interfaz* Contr = new Interfaz();
-	Cliente* Clien1 = new Cliente("Emanuel","402540125",89646441,"9999w",true,"Ema2821@gmail.com","Heredia",5);
-	Cliente* Clien2 = new Cliente("Jose","902540125",72645446,"9999w",false,"Joseam89@gmail.com","Heredia",9);
-	Cliente* Clien3 = new Cliente("Marcos","202540125",69646841,"9999w",true,"marsa46@gmail.com","Heredia",4);
+	Cliente* Clien1 = new Cliente("Emanuel","402540125","8798746","9999w",true,"Ema2821@gmail.com","Heredia",5);
+	Cliente* Clien2 = new Cliente("Jose","902540125","4646468","9999w",false,"Joseam89@gmail.com","Heredia",9);
+	Cliente* Clien3 = new Cliente("Marcos","202540125","65465412","9999w",true,"marsa46@gmail.com","Heredia",4);
 	
 	Contr->Clientes->Agregar(Clien1);
 	Contr->Clientes->Agregar(Clien2);
@@ -67,7 +68,7 @@ void Control::menu_cliente(){
 	string verificar="";
 	string Nombre;
 	string Ced;
-	//int NumTel;
+	string NumTel;
 	string NumTarje;
 	string Correo;
 	string Ubica;
@@ -77,99 +78,1035 @@ void Control::menu_cliente(){
 	int salir=0;
 	int salir2=0;
 	int Finalizar=0;
-	do{
-		system("cls");
-		cout<<"========Menu Clientes=========\n";
-		cout<<"l";
-		cout<<"==============================\n";
-		cout<<" 1. Realizar Pedido\n";
-		cout<<" 2. Salir\n";
-		cout<<"==============================\n";
-		cout<<"Opcion:  ";
-		cin>>menu;
-		try{
-			if(menu!="1"&&menu!="2"){
-				throw menu;
-			}else{
-				switch(stoi(menu)){
-				case 1:
-					do{
-						cout<<"==========Eleccion============\n";
-						cout<<" 1. KFC\n";
-						cout<<" 2. Dominos\n";
-						cout<<"==============================\n";
-						cout<<"Opcion:  ";
-						cin>>supmenus;
-						try{
-							if(supmenus!="1"&&supmenus!="2"&&supmenus!="3"&&supmenus!="4"&&supmenus!="5"&&supmenus!="6"&&supmenus!="7"&&supmenus!="8"){
-								throw supmenus;
-							}else{
-								string Pedido="";
-								int total=0;
-								switch(stoi(supmenus)){
-								case 1:
-									do{
-										cout<<KFC.tostring_contene_combo();
-										cout<<"Opcion: ";
-										cin>>combos;
-										try{
-											if(combos!="1"&&combos!="2"&&combos!="3"){
-												throw combos;
-											}else{
-												switch(stoi(combos)){
-												case 1:
-													Pedido.append(KFC.combos[0].tostring_combo());
-													total+=KFC.combos[0].get_precio();
-													break;
-												case 2:
-													Pedido.append("Combo #2 Alitas  3000\n");
-													total+=3000;
-													break;
-												case 2:
-													Pedido.append("Combo #2 Alitas  3000\n");
-													total+=3000;
-													break;
-												case 2:
-													Pedido.append("Combo #2 Alitas  3000\n");
-													total+=3000;
-													break;
-												case 2:
-													Pedido.append("Combo #2 Alitas  3000\n");
-													total+=3000;
-													break;case 10:
-													Finalizar=1;
-													cout<<Pedido<<"\n";
-													cout<<total*1.13<<"\n";
-													break;
+	cout<<"==========================================\n";
+	cout<<"Digite su ID: ";
+	cin>>verificar;
+	if(Contr->Clientes->BuscarCliente(verificar)==false){
+		cout<<"==========================================\n";
+		cout<<"Necesitamos algunos de tus datos para proseguir\n\n";
+		cout<<"Digite su nombre: ";cin>>Nombre;cout<<"\n";
+		cout<<"Digite su numero de telefono: ";cin>>NumTel;cout<<"\n";
+		cout<<"Digite su numero de tarjeta: ";cin>>NumTarje;cout<<"\n";
+		cout<<"Digite su correo: ";cin>>Correo;cout<<"\n";
+		cout<<"Digite su Ubicacion: ";cin>>Ubica;cout<<"\n";
+		cout<<"==========================================\n";
+		Cliente *c1 = new Cliente(Nombre,verificar,NumTel,NumTarje,true,Correo,Ubica,0);
+		Contr->Clientes->Agregar(c1);
+		
+		do{
+			system("cls");
+			cout<<"========Restaurantes==========\n";
+			cout<<Contr->Restau->mostrar_lista();
+			cout<<"==============================\n";
+			cout<<" 1. Realizar Pedido\n";
+			cout<<" 2. Salir\n";
+			cout<<"==============================\n";
+			cout<<"Opcion:  ";
+			cin>>menu;
+			try{
+				if(menu!="1"&&menu!="2"){
+					throw menu;
+				}else{
+					switch(stoi(menu)){
+					case 1:
+						do{
+							cout<<"==========Eleccion============\n";
+							cout<<"Opcion:  ";
+							cin>>supmenus;
+							cout<<"==============================\n";
+							try{
+								if(supmenus!="1"&&supmenus!="2"&&supmenus!="3"&&supmenus!="4"&&supmenus!="5"&&supmenus!="6"&&supmenus!="7"){
+									throw supmenus;
+								}else{
+									string conten="";
+									double total=0;
+									switch(stoi(supmenus)){
+									case 1:
+										do{
+											system("cls");
+											cout<<"===========================\n";
+											cout<<KFC.tostring_contene_combo();
+											cout<<"10. Salir\n";
+											cout<<"===========================\n";
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(KFC.combos[0].tostring_combo());
+														total+=KFC.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(KFC.combos[1].tostring_combo());
+														total+=KFC.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(KFC.combos[2].tostring_combo());
+														total+=KFC.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(KFC.combos[3].tostring_combo());
+														total+=KFC.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(KFC.combos[4].tostring_combo());
+														total+=KFC.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(KFC.combos[5].tostring_combo());
+														total+=KFC.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(KFC.combos[6].tostring_combo());
+														total+=KFC.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(KFC.combos[7].tostring_combo());
+														total+=KFC.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(KFC.combos[8].tostring_combo());
+														total+=KFC.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														cout<<P1->tostring_pedido();
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
 												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
 											}
-											
-										}catch(string combos){
-											cout<<"OP no valida";
-										}
-									}while(Finalizar!=1);
-									Finalizar=0;
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 2:
+										do{
+											system("cls");
+											cout<<"====================================\n";
+											cout<<Wendys.tostring_contene_combo();
+											cout<<"10. Salir\n";
+											cout<<"====================================\n";
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(Wendys.combos[0].tostring_combo());
+														total+=Wendys.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(Wendys.combos[1].tostring_combo());
+														total+=Wendys.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(Wendys.combos[2].tostring_combo());
+														total+=Wendys.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(Wendys.combos[3].tostring_combo());
+														total+=Wendys.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(Wendys.combos[4].tostring_combo());
+														total+=Wendys.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(Wendys.combos[5].tostring_combo());
+														total+=Wendys.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(Wendys.combos[6].tostring_combo());
+														total+=Wendys.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(Wendys.combos[7].tostring_combo());
+														total+=Wendys.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(Wendys.combos[8].tostring_combo());
+														total+=Wendys.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 3:
+										do{
+											system("cls");
+											cout<<"====================================\n";
+											cout<<Dominos.tostring_contene_combo();
+											cout<<"10. Salir\n";
+											cout<<"====================================\n";
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(Dominos.combos[0].tostring_combo());
+														total+=Dominos.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(Dominos.combos[1].tostring_combo());
+														total+=Dominos.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(Dominos.combos[2].tostring_combo());
+														total+=Dominos.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(Dominos.combos[3].tostring_combo());
+														total+=Dominos.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(Dominos.combos[4].tostring_combo());
+														total+=Dominos.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(Dominos.combos[5].tostring_combo());
+														total+=Dominos.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(Dominos.combos[6].tostring_combo());
+														total+=Dominos.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(Dominos.combos[7].tostring_combo());
+														total+=Dominos.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(Dominos.combos[8].tostring_combo());
+														total+=Dominos.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"==========================================\n";
+												cout<<"Opcion no valida\n";
+												cout<<"==========================================\n";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 4:
+										do{
+											system("cls");
+											cout<<"====================================\n";
+											cout<<PizzaH.tostring_contene_combo();
+											cout<<"10. Salir\n";
+											cout<<"====================================\n";
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(PizzaH.combos[0].tostring_combo());
+														total+=PizzaH.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(PizzaH.combos[1].tostring_combo());
+														total+=PizzaH.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(PizzaH.combos[2].tostring_combo());
+														total+=PizzaH.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(PizzaH.combos[3].tostring_combo());
+														total+=PizzaH.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(PizzaH.combos[4].tostring_combo());
+														total+=PizzaH.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(PizzaH.combos[5].tostring_combo());
+														total+=PizzaH.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(PizzaH.combos[6].tostring_combo());
+														total+=PizzaH.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(PizzaH.combos[7].tostring_combo());
+														total+=PizzaH.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(PizzaH.combos[8].tostring_combo());
+														total+=PizzaH.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 5:
+										do{
+											system("cls");
+											cout<<"====================================\n";
+											cout<<PapaJ.tostring_contene_combo();
+											cout<<"10. Salir\n";
+											cout<<"====================================\n";
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(PapaJ.combos[0].tostring_combo());
+														total+=PapaJ.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(PapaJ.combos[1].tostring_combo());
+														total+=PapaJ.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(PapaJ.combos[2].tostring_combo());
+														total+=PapaJ.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(PapaJ.combos[3].tostring_combo());
+														total+=PapaJ.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(PapaJ.combos[4].tostring_combo());
+														total+=PapaJ.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(PapaJ.combos[5].tostring_combo());
+														total+=PapaJ.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(PapaJ.combos[6].tostring_combo());
+														total+=PapaJ.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(PapaJ.combos[7].tostring_combo());
+														total+=PapaJ.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(PapaJ.combos[8].tostring_combo());
+														total+=PapaJ.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 6:
+										do{
+											system("cls");
+											cout<<"====================================\n";
+											cout<<Bugys.tostring_contene_combo();
+											cout<<"10. Salir\n";
+											cout<<"====================================\n";
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(Bugys.combos[0].tostring_combo());
+														total+=Bugys.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(Bugys.combos[1].tostring_combo());
+														total+=Bugys.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(Bugys.combos[2].tostring_combo());
+														total+=Bugys.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(Bugys.combos[3].tostring_combo());
+														total+=Bugys.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(Bugys.combos[4].tostring_combo());
+														total+=Bugys.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(Bugys.combos[5].tostring_combo());
+														total+=Bugys.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(Bugys.combos[6].tostring_combo());
+														total+=Bugys.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(Bugys.combos[7].tostring_combo());
+														total+=Bugys.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(Bugys.combos[8].tostring_combo());
+														total+=Bugys.combos[8].get_precio();
+														break;
+													case 10:
+														Finalizar=1;
+														cout<<conten<<"\n";
+														cout<<total*1.13<<"\n";
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 7:
+										do{
+											system("cls");
+											cout<<"====================================\n";
+											cout<<TB.tostring_contene_combo();
+											cout<<"10. Salir\n";
+											cout<<"====================================\n";
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(TB.combos[0].tostring_combo());
+														total+=TB.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(TB.combos[1].tostring_combo());
+														total+=TB.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(TB.combos[2].tostring_combo());
+														total+=TB.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(TB.combos[3].tostring_combo());
+														total+=TB.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(TB.combos[4].tostring_combo());
+														total+=TB.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(TB.combos[5].tostring_combo());
+														total+=TB.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(TB.combos[6].tostring_combo());
+														total+=TB.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(TB.combos[7].tostring_combo());
+														total+=TB.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(TB.combos[8].tostring_combo());
+														total+=TB.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									}
 								}
 							}
-						}
-						catch(string supmenus){
-							cout<<"Opcion no valida, vuelva a intertarlo\n";
-						}
-					}while(salir2!=1);
-					salir2=0;
-					break;
-				case 2:
-					cout<<"Saliendo...\n";
-					Sleep(3600);
-					salir=1;
-					break;
+							catch(string supmenus){
+								cout<<"Opcion no valida, vuelva a intertarlo\n";
+							}
+						}while(salir2!=1);
+						salir2=0;
+						break;
+					case 2:
+						cout<<"Saliendo...\n";
+						Sleep(3600);
+						salir=1;
+						break;
+					}
 				}
 			}
-		}
-		catch(string menu){
-			cout<<"Opcion no valida, vulevalo a intentar\n";
-		}
-	}while(salir!=1);
+			catch(string menu){
+				cout<<"Opcion no valida, vulevalo a intentar\n";
+			}
+		}while(salir!=1);
+		
+		
+	}else{
+		do{
+			system("cls");
+			cout<<"========Restaurantes==========\n";
+			cout<<Contr->Restau->mostrar_lista();
+			cout<<"==============================\n";
+			cout<<" 1. Realizar Pedido\n";
+			cout<<" 2. Salir\n";
+			cout<<"==============================\n";
+			cout<<"Opcion:  ";
+			cin>>menu;
+			try{
+				if(menu!="1"&&menu!="2"){
+					throw menu;
+				}else{
+					switch(stoi(menu)){
+					case 1:
+						do{
+							cout<<"==========Eleccion============\n";
+							cout<<"Opcion:  ";
+							cin>>supmenus;
+							cout<<"==============================\n";
+							try{
+								if(supmenus!="1"&&supmenus!="2"&&supmenus!="3"&&supmenus!="4"&&supmenus!="5"&&supmenus!="6"&&supmenus!="7"){
+									throw supmenus;
+								}else{
+									string conten="";
+									double total=0;
+									switch(stoi(supmenus)){
+									case 1:
+										do{
+											cout<<KFC.tostring_contene_combo();
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(KFC.combos[0].tostring_combo());
+														total+=KFC.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(KFC.combos[1].tostring_combo());
+														total+=KFC.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(KFC.combos[2].tostring_combo());
+														total+=KFC.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(KFC.combos[3].tostring_combo());
+														total+=KFC.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(KFC.combos[4].tostring_combo());
+														total+=KFC.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(KFC.combos[5].tostring_combo());
+														total+=KFC.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(KFC.combos[6].tostring_combo());
+														total+=KFC.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(KFC.combos[7].tostring_combo());
+														total+=KFC.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(KFC.combos[8].tostring_combo());
+														total+=KFC.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 2:
+										do{
+											cout<<Wendys.tostring_contene_combo();
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(Wendys.combos[0].tostring_combo());
+														total+=Wendys.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(Wendys.combos[1].tostring_combo());
+														total+=Wendys.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(Wendys.combos[2].tostring_combo());
+														total+=Wendys.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(Wendys.combos[3].tostring_combo());
+														total+=Wendys.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(Wendys.combos[4].tostring_combo());
+														total+=Wendys.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(Wendys.combos[5].tostring_combo());
+														total+=Wendys.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(Wendys.combos[6].tostring_combo());
+														total+=Wendys.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(Wendys.combos[7].tostring_combo());
+														total+=Wendys.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(Wendys.combos[8].tostring_combo());
+														total+=Wendys.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 3:
+										do{
+											cout<<Dominos.tostring_contene_combo();
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(Dominos.combos[0].tostring_combo());
+														total+=Dominos.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(Dominos.combos[1].tostring_combo());
+														total+=Dominos.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(Dominos.combos[2].tostring_combo());
+														total+=Dominos.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(Dominos.combos[3].tostring_combo());
+														total+=Dominos.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(Dominos.combos[4].tostring_combo());
+														total+=Dominos.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(Dominos.combos[5].tostring_combo());
+														total+=Dominos.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(Dominos.combos[6].tostring_combo());
+														total+=Dominos.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(Dominos.combos[7].tostring_combo());
+														total+=Dominos.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(Dominos.combos[8].tostring_combo());
+														total+=Dominos.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 4:
+										do{
+											cout<<PizzaH.tostring_contene_combo();
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(PizzaH.combos[0].tostring_combo());
+														total+=PizzaH.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(PizzaH.combos[1].tostring_combo());
+														total+=PizzaH.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(PizzaH.combos[2].tostring_combo());
+														total+=PizzaH.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(PizzaH.combos[3].tostring_combo());
+														total+=PizzaH.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(PizzaH.combos[4].tostring_combo());
+														total+=PizzaH.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(PizzaH.combos[5].tostring_combo());
+														total+=PizzaH.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(PizzaH.combos[6].tostring_combo());
+														total+=PizzaH.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(PizzaH.combos[7].tostring_combo());
+														total+=PizzaH.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(PizzaH.combos[8].tostring_combo());
+														total+=PizzaH.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 5:
+										do{
+											cout<<PapaJ.tostring_contene_combo();
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(PapaJ.combos[0].tostring_combo());
+														total+=PapaJ.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(PapaJ.combos[1].tostring_combo());
+														total+=PapaJ.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(PapaJ.combos[2].tostring_combo());
+														total+=PapaJ.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(PapaJ.combos[3].tostring_combo());
+														total+=PapaJ.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(PapaJ.combos[4].tostring_combo());
+														total+=PapaJ.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(PapaJ.combos[5].tostring_combo());
+														total+=PapaJ.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(PapaJ.combos[6].tostring_combo());
+														total+=PapaJ.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(PapaJ.combos[7].tostring_combo());
+														total+=PapaJ.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(PapaJ.combos[8].tostring_combo());
+														total+=PapaJ.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 6:
+										do{
+											cout<<KFC.tostring_contene_combo();
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(Bugys.combos[0].tostring_combo());
+														total+=Bugys.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(Bugys.combos[1].tostring_combo());
+														total+=Bugys.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(Bugys.combos[2].tostring_combo());
+														total+=Bugys.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(Bugys.combos[3].tostring_combo());
+														total+=Bugys.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(Bugys.combos[4].tostring_combo());
+														total+=Bugys.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(Bugys.combos[5].tostring_combo());
+														total+=Bugys.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(Bugys.combos[6].tostring_combo());
+														total+=Bugys.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(Bugys.combos[7].tostring_combo());
+														total+=Bugys.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(Bugys.combos[8].tostring_combo());
+														total+=Bugys.combos[8].get_precio();
+														break;
+													case 10:
+														Finalizar=1;
+														cout<<conten<<"\n";
+														cout<<total*1.13<<"\n";
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									case 7:
+										do{
+											cout<<TB.tostring_contene_combo();
+											cout<<"Opcion: ";
+											cin>>combos;
+											try{
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+													throw combos;
+												}else{
+													switch(stoi(combos)){
+													case 1:
+														conten.append(TB.combos[0].tostring_combo());
+														total+=TB.combos[0].get_precio();
+														break;
+													case 2:
+														conten.append(TB.combos[1].tostring_combo());
+														total+=TB.combos[1].get_precio();
+														break;
+													case 3:
+														conten.append(TB.combos[2].tostring_combo());
+														total+=TB.combos[2].get_precio();
+														break;
+													case 4:
+														conten.append(TB.combos[3].tostring_combo());
+														total+=TB.combos[3].get_precio();
+														break;
+													case 5:
+														conten.append(TB.combos[4].tostring_combo());
+														total+=TB.combos[4].get_precio();
+														break;
+													case 6:
+														conten.append(TB.combos[5].tostring_combo());
+														total+=TB.combos[5].get_precio();
+														break;
+													case 7:
+														conten.append(TB.combos[6].tostring_combo());
+														total+=TB.combos[6].get_precio();
+														break;
+													case 8:
+														conten.append(TB.combos[7].tostring_combo());
+														total+=TB.combos[7].get_precio();
+														break;
+													case 9:
+														conten.append(TB.combos[8].tostring_combo());
+														total+=TB.combos[8].get_precio();
+														break;
+													case 10:
+														total*=1.13;
+														Pedido *P1 = new Pedido("Preparacion",conten,total,"11:00 am","11:50");
+														Contr->Pedidos->agregar_pedido(P1);
+														Finalizar=1;
+														break;
+													}
+												}
+												
+											}catch(string combos){
+												cout<<"OP no valida";
+											}
+										}while(Finalizar!=1);
+										total=0;
+										Finalizar=0;
+										salir2 = 1;
+										break; 
+									}
+								}
+							}
+							catch(string supmenus){
+								cout<<"Opcion no valida, vuelva a intertarlo\n";
+							}
+						}while(salir2!=1);
+						salir2=0;
+						break;
+					case 2:
+						cout<<"Saliendo...\n";
+						Sleep(3600);
+						salir=1;
+						break;
+					}
+				}
+			}
+			catch(string menu){
+				cout<<"Opcion no valida, vulevalo a intentar\n";
+			}
+		}while(salir!=1);
+	}
+	
 	
 	delete Clien1;	delete Clien2;	delete Clien3; delete Contr;
 	

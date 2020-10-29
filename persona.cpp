@@ -4,7 +4,7 @@ Persona::Persona() {
 	
 	nombre = "";
 	cedula = "";
-	num_tel = 0;
+	num_tel = "";
 	num_tarje = "";
 	estado = false;
 	correo = "";
@@ -12,7 +12,7 @@ Persona::Persona() {
 	
 }
 
-Persona::Persona(string nombre, string cedula, int num_tel, string num_tarje, bool estado, string correo, string direccion) {
+Persona::Persona(string nombre, string cedula, string num_tel, string num_tarje, bool estado, string correo, string direccion) {
 	
 	this->nombre = nombre;
 	this->cedula = cedula;
@@ -42,7 +42,7 @@ void Persona::set_cedula(string cedula) {
 	
 }
 
-void Persona::set_num_tel(int num_tel) {
+void Persona::set_num_tel(string num_tel) {
 	
 	this->num_tel = num_tel;
 	
@@ -85,7 +85,7 @@ string Persona::get_cedula() {
 	
 }
 
-int Persona::get_num_tel() {
+string Persona::get_num_tel() {
 	
 	return num_tel;
 	
