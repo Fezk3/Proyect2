@@ -15,7 +15,7 @@ public:
 	ListaClientes* Clientes;
 	ListaPedido* Pedidos;
 	ListaReparti* Repartidores;
-	Interfaz();
+	Interfaz(Pedido *, Pedido *, Pedido*, Repartidor *, Repartidor *, Repartidor *, Cliente *, Cliente *, Cliente *);
 	virtual ~Interfaz();
 	
 	/*void GuardaRestaurante();

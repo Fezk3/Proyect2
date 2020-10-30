@@ -1,11 +1,17 @@
 #include "Interfaz.h"
 
-Interfaz::Interfaz() {
+Interfaz::Interfaz(Pedido *p1, Pedido *p2, Pedido *p3, Repartidor *r1, Repartidor *r2, Repartidor *r3, Cliente *c1, Cliente *c2, Cliente *c3) {
 	
 	Clientes = new ListaClientes();
 	Pedidos = new ListaPedido();
 	Repartidores = new ListaReparti();
 	Restau = new ContenedorRest();
+	
+	//Inicializando listas con objetos
+	
+	Clientes->Agregar(c1); Clientes->Agregar(c2); Clientes->Agregar(c3); 
+	Pedidos->agregar_pedido(p1); Pedidos->agregar_pedido(p2); Pedidos->agregar_pedido(p3);
+	Repartidores->agregar_reparti(r1); Repartidores->agregar_reparti(r2); Repartidores->agregar_reparti(r3); 
 	
 }
 

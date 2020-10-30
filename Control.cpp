@@ -1,11 +1,23 @@
 #include "Control.h"
 
+
+
 Control::Control(){
-	Interfaz* Contr = new Interfaz();
 	
-	Cliente* Clien1 = new Cliente("Emanuel","402540125","8798746","9999w",true,"Ema2821@gmail.com","Heredia",5);
-	Cliente* Clien2 = new Cliente("Jose","902540125","4646468","9999w",false,"Joseam89@gmail.com","Heredia",9);
-	Cliente* Clien3 = new Cliente("Marcos","202540125","65465412","9999w",true,"marsa46@gmail.com","Heredia",4);
+	Cliente* c1 = new Cliente("Emanuel","402540125","8798746","9999w",true,"Ema2821@gmail.com","Heredia",5);
+	Cliente* c2 = new Cliente("Jose","902540125","4646468","9999w",false,"Joseam89@gmail.com","Heredia",9);
+	Cliente* c3 = new Cliente("Marcos","202540125","65465412","9999w",true,"marsa46@gmail.com","Heredia",4);
+	
+	Repartidor* r1 = new Repartidor("Victor", "4654564", "24586", "5asd4", true, "vict@gmail.com", "Palmares", 7.3, 0);
+	Repartidor* r2 = new Repartidor("Kevin", "465454", "34586", "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
+	Repartidor* r3 = new Repartidor("Warner", "4gseg564", "14586", "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
+	
+	Pedido* p1 = new Pedido("402540125","Popeyes","Entregado","4x Alitas 4000\n",4520,"11:12 am","12:30 pm");
+	Pedido* p2 = new Pedido("902540125","Popeyes","Entregado","8x Alitas 6000\n",6780,"11:12 am","12:30 pm");
+	Pedido* p3 = new Pedido("202540125","Popeyes","Entregado","4x Alitas 4000\n",4520,"11:55 am","01:00 pm");
+	
+	Interfaz* Menu = new Interfaz(p1,p2,p3,r1,r2,r3,c1,c2,c3);
+	
 	
 }
 void Control::menu_cliente(){
@@ -63,6 +75,7 @@ void Control::menu_cliente(){
 	ContenedorCombo TB(unou, dosu, treu, cuatu, cincu, seiu, sieu, ochuu, nueu);
 	
 	//***********************************************************************************************************************************
+	
 	
 	string verificar="";
 	string iden;
@@ -1209,16 +1222,6 @@ void Control::menu_repartidor(){
 	int amonesta = 0;
 	bool est = false;
 	
-	Repartidor* rep1 = new Repartidor("Victor", "4654564", "24586", "5asd4", true, "vict@gmail.com", "Palmares", 7.3, 0);
-	Repartidor* rep2 = new Repartidor("Kevin", "465454", "34586", "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
-	Repartidor* rep3 = new Repartidor("Warner", "4gseg564", "14586", "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
-	
-	
-	// agregando repartidores a la lista
-	
-	Rep->Repartidores->agregar_reparti(rep1);
-	Rep->Repartidores->agregar_reparti(rep2);
-	Rep->Repartidores->agregar_reparti(rep3);
 	
 	cout<<"Bienvenido a CletaEats: "<<endl;
 	
