@@ -25,8 +25,8 @@ public:
 	void LeerRepartidores();
 	void GuardaClientes();
 	void LeerClientes();
-	void GuardaPedidos();
-	void LeerPedidos();
+	void GuardaPedidos(string id, Pedido *L);
+	void LeerPedidos(string id);
 	void Client_MayorP();
 	
 };

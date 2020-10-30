@@ -40,19 +40,14 @@ void ListaReparti::agregar_reparti(Repartidor* repa) {
 	}
 	
 }
-bool ListaReparti::buscar_reparti() {  //si esta en estado disponible (true) y tiene menos de 3 amonestaciones
+bool ListaReparti::buscar_reparti(string id) {  //si esta en estado disponible (true) y tiene menos de 3 amonestaciones
 	
 	NodoReparti* aux = ini;
 	
 	while (aux != NULL)
 	{
 		
-		if ((aux->get_dato()->get_estado() == true) && (aux->get_dato()->get_num_amonesta() < 4)) {
-			
-			return true;
-			
-		}
-		
+		if (aux->get_dato()->get_cedula() == id) {return true; break; }
 		aux = aux->get_sig();
 		
 	}
@@ -207,5 +202,4 @@ Repartidor *ListaReparti::userR(string id){
 		aux = aux->get_sig();
 		
 	}
-	
 }

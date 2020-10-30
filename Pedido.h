@@ -10,6 +10,8 @@ class Pedido {
 private:
 	
 	static int num;
+	string id_clie;
+	string nombre_rest;
 	string estado;
 	int id;
 	string contenido;
@@ -19,12 +21,14 @@ private:
 	
 public:
 	
-	Pedido(string, string, double, string, string);
+	Pedido(string,string,string, string, double, string, string);
 	~Pedido();
 	
 	//sets
 	
 	void set_estado(string estado);
+	void set_id_clie(string id_clie);
+	void set_nombre_rest(string nombre_rest);
 	void set_id(int id);
 	void set_contenido(string contenido);
 	void set_precio(double precio);
@@ -34,6 +38,8 @@ public:
 	//gets
 	
 	string get_estado();
+	string get_id_clie();
+	string get_nombre_rest();
 	int get_id();
 	string get_contenido();
 	double get_precio();

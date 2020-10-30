@@ -18,7 +18,7 @@ public:
 	
 	Repartidor *userR(string id);
 	void agregar_reparti(Repartidor* repa);
-	bool buscar_reparti();
+	bool buscar_reparti(string);
 	void eliminar_reparti();
 	void mostrarlistaR();
 	bool checkR(string num_cedula);

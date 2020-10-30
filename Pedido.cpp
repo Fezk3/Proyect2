@@ -2,9 +2,11 @@
 
 int Pedido::num = 1;
 
-Pedido::Pedido(string estado, string contenido, double precio, string hora_inicio, string hora_final) {
+Pedido::Pedido(string id_clie,string nombre_rest,string estado, string contenido, double precio, string hora_inicio, string hora_final) {
 	
 	int num_pedido = num;
+	this->id_clie=id_clie;
+	this->nombre_rest=nombre_rest;
 	this->contenido = contenido;
 	this->estado = estado;
 	this->id = num_pedido;
@@ -21,6 +23,16 @@ Pedido::~Pedido(){
 
 //Sets
 
+void Pedido::set_id_clie(string id_clie){
+	
+	this->id_clie=id_clie;
+	
+}
+void Pedido::set_nombre_rest(string nombre_rest){
+	
+	this->nombre_rest=nombre_rest;
+	
+}
 void Pedido::set_estado(string estado) {
 	
 	this->estado = estado;
@@ -53,6 +65,17 @@ void Pedido::set_hora_fin(string hora_fin) {
 }
 
 //Gets
+
+string Pedido::get_id_clie(){
+	
+	return id_clie;
+	
+}
+string Pedido::get_nombre_rest(){
+	
+	return nombre_rest;
+	
+}
 
 string Pedido::get_estado() {
 	
@@ -92,6 +115,7 @@ string Pedido::tostring_pedido() {  //concatenar el combo en main y enviarlo
 	stringstream x;
 	
 	x << "Id: " << get_id() << endl;
+	x << "Restaurante: "<<get_nombre_rest();
 	x << "Estado: " << get_estado() << endl;
 	x << "Pedido: \n" << get_contenido() << endl;
 	x << "Hora de preparacion: " << get_hora_ini() << endl;

@@ -100,3 +100,21 @@ NodoPedido *ListaPedido::get_head(){
 	return head;
 	
 }
+
+Pedido *ListaPedido::pedido(){
+	
+	NodoPedido *aux = head;
+	
+	while(aux!=NULL){
+		
+		if(aux->get_pedido()->get_estado() == "en preparacion"){
+			
+			return aux->get_pedido();
+			
+		}
+		
+		aux = aux->get_sig_pedido();
+		
+	}
+	
+}

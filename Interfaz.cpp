@@ -109,6 +109,7 @@ void Interfaz::LeerClientes(){
 	
 	string Escribir;
 	
+	
 	ifstream Client("./Cliente/Lista/ListaClientes.txt",ios::in);
 	
 	while(!Client.eof()){
@@ -122,29 +123,28 @@ void Interfaz::LeerClientes(){
 	
 }
 
-void Interfaz::GuardaPedidos(){
+void Interfaz::GuardaPedidos(string id, Pedido *L){
 	
-	NodoPedido *Aux = Pedidos->get_head();
+	Cliente *Aux = Clientes->user(id);
+	Aux->Aumentar();
+	
 	string Escribir;
 	
+	ofstream Pedi("./Cliente/Pedidos/"+id+".txt",ios::app);
 	
-	ofstream Pedi("./Pedidos/ListaPedidos.txt",ios::app);
-	
-	while(Aux!=NULL){
-		Escribir= Aux->get_pedido()->tostring_pedido();;
-		Pedi<<Escribir;
-		Pedi<<"\n=================================================================\n\n";
-		Aux=Aux->get_sig_pedido();
-	}
+	Escribir = L->tostring_pedido();
+	Pedi<<Escribir;
+	Pedi<<"\n=================================================================\n\n";
 	
 	Pedi.close();
 }
 
-void Interfaz::LeerPedidos(){
+void Interfaz::LeerPedidos(string id){
 	
 	string Escribir;
 	
-	ifstream Pedi("./Pedidos/ListaPedidos.txt",ios::in);
+	
+	ifstream Pedi("./Cliente/Pedidos/"+id+".txt",ios::in);
 	
 	while(!Pedi.eof()){
 		
