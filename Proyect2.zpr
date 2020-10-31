@@ -19,11 +19,11 @@ current_source=Control.cpp
 path_char=\
 [source]
 path=main.cpp
-cursor=4:11
+cursor=36:12
 open=true
 [source]
 path=Control.cpp
-cursor=20:1
+cursor=708:3
 open=true
 [source]
 path=Restaurante.cpp
@@ -39,7 +39,7 @@ cursor=22:0
 open=true
 [source]
 path=ListaCliente.cpp
-cursor=162:28
+cursor=178:0
 open=true
 [source]
 path=ListaPedido.cpp
@@ -47,7 +47,7 @@ cursor=119:0
 open=true
 [source]
 path=ListaReparti.cpp
-cursor=56:1
+cursor=150:0
 open=true
 [source]
 path=NodoCliente.cpp
@@ -75,7 +75,7 @@ cursor=2:8
 open=true
 [source]
 path=Pedido.cpp
-cursor=70:15
+cursor=9:21
 open=true
 [source]
 path=Combo.cpp
@@ -87,7 +87,7 @@ cursor=19:1
 open=true
 [header]
 path=Control.h
-cursor=8:17
+cursor=13:9
 open=true
 [header]
 path=Restaurante.h
@@ -103,15 +103,15 @@ cursor=11:31
 open=true
 [header]
 path=ListaCliente.h
-cursor=19:28
+cursor=2:17
 open=true
 [header]
 path=ListaPedido.h
-cursor=22:18
+cursor=14:1
 open=true
 [header]
 path=ListaReparti.h
-cursor=20:27
+cursor=1:22
 open=true
 [header]
 path=NodoCliente.h
@@ -139,7 +139,7 @@ cursor=17:28
 open=true
 [header]
 path=Pedido.h
-cursor=12:15
+cursor=7:12
 open=true
 [header]
 path=Combo.h

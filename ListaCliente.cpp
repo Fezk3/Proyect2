@@ -177,3 +177,36 @@ Cliente *ListaClientes::user(string id){
 	}
 	
 }
+
+void ListaClientes::queja(string id, string recla){
+	
+	ofstream reclamo("./Quejas/"+id+".txt",ios::app); 
+	
+	if(reclamo.fail()){
+		cout<<"Error\n";
+		exit(1);
+	}
+	if(reclamo.good()){
+		reclamo<<'-'<<recla<<"\n\n";
+	}
+	
+	reclamo.close();
+	
+}
+
+void ListaClientes::leer_queja(string id){
+	
+	string impri;
+	
+	ifstream reclamo("./Quejas/"+id+".txt",ios::in);
+	
+	while(!reclamo.eof()){
+		
+		getline(reclamo, impri);
+		cout<<impri<<endl;
+		
+	}
+	
+	reclamo.close();
+	
+}

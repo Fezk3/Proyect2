@@ -6,11 +6,12 @@
 
 class Control{
 private:
-	Interfaz *Contr;
+	Interfaz *Menu;
 public:
 	Control();
 	void menu_cliente();
 	void menu_repartidor();
+	virtual ~Control();
 	
 };
 	

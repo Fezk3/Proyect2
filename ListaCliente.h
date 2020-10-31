@@ -1,5 +1,6 @@
 #ifndef LISTACLIENTE_H
 #define LISTACLIENTE_H
+#include <fstream>
 #include "NodoCliente.h"
 
 class ListaClientes
@@ -23,6 +24,8 @@ public:
 	void clientes_suspen();
 	bool checkC(string);
 	void cliente_maspedi();
+	void queja(string,string);
+	void leer_queja(string);
 	NodoCliente *get_head();
 	
 };
