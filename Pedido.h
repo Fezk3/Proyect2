@@ -11,6 +11,7 @@ private:
 	
 	static int num;
 	string id_clie;
+	string id_reparti;
 	string cli_direcc;
 	string nombre_rest;
 	string estado;
@@ -22,13 +23,14 @@ private:
 	
 public:
 	
-	Pedido(string,string,string,string, string, double, string, string);
+	Pedido(string,string,string,string, string, double, string, string,string);
 	~Pedido();
 	
 	//sets
 	
 	void set_estado(string estado);
 	void set_id_clie(string id_clie);
+	void set_id_reparti(string id_reparti);
 	void set_nombre_rest(string nombre_rest);
 	void set_cli_direcc(string cli_direcc);
 	void set_id(int id);
@@ -41,6 +43,7 @@ public:
 	
 	string get_estado();
 	string get_id_clie();
+	string get_id_reparti();
 	string get_nombre_rest();
 	string get_cli_direcc();
 	int get_id();

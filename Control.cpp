@@ -12,9 +12,9 @@ Control::Control(){
 	Repartidor* r2 = new Repartidor("Kevin", "465454", "34586", "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
 	Repartidor* r3 = new Repartidor("Warner", "4gseg564", "14586", "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
 	
-	Pedido* p1 = new Pedido("402540125","Popeyes",c1->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:12","_:_");
-	Pedido* p2 = new Pedido("902540125","Popeyes",c2->get_direccion(),"Entregado","8x Alitas 6000\n",6780,"11:12","12:30");
-	Pedido* p3 = new Pedido("202540125","Popeyes",c3->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:55","01:00");
+	Pedido* p1 = new Pedido("402540125","Popeyes",c1->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:12","_:_","4654564");
+	Pedido* p2 = new Pedido("902540125","Popeyes",c2->get_direccion(),"Entregado","8x Alitas 6000\n",6780,"11:12","12:30","4654564");
+	Pedido* p3 = new Pedido("202540125","Popeyes",c3->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:55","01:00","4654564");
 	
 	
 	Menu = new Interfaz(p1,p2,p3,r1,r2,r3,c1,c2,c3);
@@ -193,7 +193,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"en preparacion",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -271,7 +271,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");											
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");											
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -349,7 +349,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -426,7 +426,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"Entregado",conten,total,"11:19","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"11:19","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -503,7 +503,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														break;
@@ -572,7 +572,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -650,7 +650,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"Entregado",conten,total,"11:00 am","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00 am","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -794,7 +794,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -872,7 +872,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");											
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");											
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -950,7 +950,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -1028,7 +1028,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -1064,7 +1064,7 @@ void Control::menu_cliente(){
 											cout<<"Opcion: ";
 											cin>>combos;
 											try{
-												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10"){
+												if(combos!="1"&&combos!="2"&&combos!="3"&&combos!="4"&&combos!="5"&&combos!="6"&&combos!="7"&&combos!="8"&&combos!="9"&&combos!="10",""){
 													throw combos;
 												}else{
 													switch(stoi(combos)){
@@ -1106,7 +1106,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"Entregado",conten,total,"11:00 am","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00 am","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -1184,7 +1184,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -1262,7 +1262,7 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"Entregado",conten,total,"11:00","_:_");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
 														Finalizar=1;
 														system("cls");
@@ -1476,7 +1476,8 @@ void Control::menu_repartidor(){
 									//estados: en camino, suspendido y entregado
 									
 									if(op3=="1"){
-										
+										uwu->set_estado(true);
+										owo->set_id_reparti(uwu->get_cedula());
 										cout<<"Desea pasar el estado del pedido a: En camino  "<<endl;
 										cout<<"1: SI || 2.NO"<<endl;
 										cin>>op4;
@@ -1576,6 +1577,8 @@ void Control::menu_repartidor(){
 								owo->set_hora_fin(hora);
 								
 								Menu->GuardaPedidos(owo->get_id_clie(),owo);
+								
+								uwu->set_estado(false);
 								
 								cout<<"\n\nLos "<<tot<<"seran depositados en su tarjeta n:"<<uwu->get_num_tarje()<<endl;
 								system("pause");
@@ -1691,6 +1694,8 @@ void Control::menu_admin(){
 				}else{
 					
 					cout<<"Cedula no registrada"<<endl;
+					system("pause");
+					system("cls");
 					break;
 					
 				}
@@ -1780,11 +1785,13 @@ void Control::menu_admin(){
 				
 				cout<<"Saliendo..."<<endl;
 				system("pause");
-				exit(1);
+				break;
 				
 			default:
 				
 				cout<<"Opcion invalida"<<endl;
+				system("pause");
+				system("cls");
 				break;
 				
 			}

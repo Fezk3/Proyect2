@@ -9,3 +9,19 @@ Hora de entrega: _:_
 
 =================================================================
 
+Id: 4
+Restaurante: Wendys
+Estado: Entregado
+Pedido: 
+Combo: Dave's                  Precio: 4000
+Combo: Dave's                  Precio: 4000
+Combo: Baconator                  Precio: 5000
+Combo: 10 Nuggets                  Precio: 6000
+Combo: Classic Sandwitch                  Precio: 7000
+Combo: Grilled Sandwitch                  Precio: 8000
+
+Hora de preparacion: 11:00
+Hora de entrega: _:_
+
+=================================================================
+

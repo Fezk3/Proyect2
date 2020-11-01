@@ -19,11 +19,11 @@ current_source=Control.cpp
 path_char=\
 [source]
 path=main.cpp
-cursor=16:18
+cursor=56:4
 open=true
 [source]
 path=Control.cpp
-cursor=1577:52
+cursor=12:77
 open=true
 [source]
 path=Restaurante.cpp
@@ -31,7 +31,7 @@ cursor=2:11
 open=true
 [source]
 path=persona.cpp
-cursor=87:6
+cursor=135:17
 open=true
 [source]
 path=Cliente.cpp
@@ -47,7 +47,7 @@ cursor=117:2
 open=true
 [source]
 path=ListaReparti.cpp
-cursor=141:3
+cursor=161:1
 open=true
 [source]
 path=NodoCliente.cpp
@@ -75,7 +75,7 @@ cursor=141:17
 open=true
 [source]
 path=Pedido.cpp
-cursor=15:31
+cursor=16:22
 open=true
 [source]
 path=Combo.cpp
@@ -139,7 +139,7 @@ cursor=23:37
 open=true
 [header]
 path=Pedido.h
-cursor=7:12
+cursor=32:1
 open=true
 [header]
 path=Combo.h

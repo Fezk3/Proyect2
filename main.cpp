@@ -13,11 +13,12 @@ int main() {
 			system("cls");
 			cout<<"Digite que tipo de usuario es usted: "<<endl;
 			cout<<"1. Cliente"<<endl;
-			cout<<"2. Repartidor"<<endl;
-			cout<<"3. Admin"<<endl;
-			cout<<"4. Salir"<<endl;
+			cout<<"2. Queja"<<endl;
+			cout<<"3. Repartidor"<<endl;
+			cout<<"4. Admin"<<endl;
+			cout<<"5. Salir"<<endl;
 			cin>>op;
-			if(op!="1"&&op!="2"&&op!="3"&&op!="4"){
+			if(op!="1"&&op!="2"&&op!="3"&&op!="4"&&op!="5"){
 				throw op;
 			}else{
 				switch(stoi(op)){
@@ -41,6 +42,13 @@ int main() {
 					c1->menu_admin();
 					break;
 				case 4:
+					system("cls");
+					cout<<"Abriendo el menu de Administradores...\n";
+					Sleep(1600);
+					system("cls");
+					c1->menu_admin();
+					break;
+				case 5:
 					cout<<"Saliendo...\n";
 					Sleep(1600);
 					exit(0);

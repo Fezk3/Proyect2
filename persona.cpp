@@ -133,7 +133,7 @@ string Persona::TostringPer() {
 	}
 	else {
 		
-		x << "Estado: ocupado" << endl;
+		x << "Estado: Ocupado" << endl;
 		
 	}
 	
