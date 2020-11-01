@@ -1575,7 +1575,9 @@ void Control::menu_repartidor(){
 								getline(cin, hora);
 								owo->set_hora_fin(hora);
 								
-								cout<<"\n\nLos ¢"<<tot<<"seran depositados en su tarjeta n:"<<uwu->get_num_tarje()<<endl;
+								Menu->GuardaPedidos(owo->get_id_clie(),owo);
+								
+								cout<<"\n\nLos "<<tot<<"seran depositados en su tarjeta n:"<<uwu->get_num_tarje()<<endl;
 								system("pause");
 								system("cls");
 								break;
