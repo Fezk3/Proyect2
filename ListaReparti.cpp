@@ -140,6 +140,8 @@ bool ListaReparti::checkR(string num_ced){  //checks si el repartidor esta en la
 				
 			}
 			
+			aux = aux->get_sig();
+			
 		}
 		
 	}
@@ -150,11 +152,11 @@ bool ListaReparti::checkR(string num_ced){  //checks si el repartidor esta en la
 
 
 
-NodoReparti *ListaReparti::get_ini(){
+/*NodoReparti *ListaReparti::get_ini(){
 	
 	return ini;
 	
-}
+}*/
 
 Repartidor *ListaReparti::userR(string id){ 
 	

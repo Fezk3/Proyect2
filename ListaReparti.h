@@ -21,7 +21,7 @@ public:
 	void eliminar_reparti();
 	void mostrarlistaR();
 	bool checkR(string num_cedula);
-	NodoReparti *get_ini();
+	//NodoReparti *get_ini();
 	
 };
 

@@ -1,0 +1,11 @@
+Id: 2
+Restaurante: Popeyes
+Estado: Entregado
+Pedido: 
+8x Alitas 6000
+
+Hora de preparacion: 11:12
+Hora de entrega: 12:30
+
+=================================================================
+

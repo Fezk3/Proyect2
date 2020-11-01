@@ -68,7 +68,7 @@ string ContenedorRest::total_resta(){
 	
 	for(int i =0;i<7;i++){
 		
-		z<<"Total vendido del restaurante "<<contenedor[i]->get_nombre()<<" ¢"<<contenedor[i]->get_total()<<endl;
+		z<<"Total vendido del restaurante "<<contenedor[i]->get_nombre()<<" "<<contenedor[i]->get_total()<< " Colones"<<endl;
 		
 	}
 	

@@ -1,2 +1,35 @@
 
 
+Nombre: Emanuel
+Cedula: 402540125
+Numero telefonico: 8798746
+Numero de tarjeta: 9999w
+Estado: Disponible
+Correo: Ema2821@gmail.com
+Direccion: Heredia
+Pedidos realizados: 5
+
+=================================================================
+
+Nombre: Jose
+Cedula: 902540125
+Numero telefonico: 4646468
+Numero de tarjeta: 9999w
+Estado: ocupado
+Correo: Joseam89@gmail.com
+Direccion: Heredia
+Pedidos realizados: 9
+
+=================================================================
+
+Nombre: Marcos
+Cedula: 202540125
+Numero telefonico: 65465412
+Numero de tarjeta: 9999w
+Estado: Disponible
+Correo: marsa46@gmail.com
+Direccion: Heredia
+Pedidos realizados: 4
+
+=================================================================
+

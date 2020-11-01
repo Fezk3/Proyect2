@@ -20,6 +20,7 @@ public:
 	void mostrar_pedidos();
 	void hora_pico();
 	NodoPedido *get_head();
+	bool verifica_estado(string);
 	Pedido *pedido();
 	
 };

@@ -55,20 +55,18 @@ Resta.close();
 }
 */
 
-void Interfaz::GuardaRepartidores(){
+void Interfaz::GuardaRepartidores(Repartidor *Nuevo){
 	
-	NodoReparti *Aux = Repartidores->get_ini();
 	string Escribir;
 	
 	
 	ofstream Reparti("./Repartidores/Lista/ListaRepartidores.txt",ios::app);
 	
-	while(Aux!=NULL){
-		Escribir= Aux->get_dato()->tostringRepa();
-		Reparti<<Escribir;
-		Reparti<<"\n=================================================================\n\n";
-		Aux=Aux->get_sig();
-	}
+	Escribir = Nuevo->tostringRepa();
+		
+	Reparti<<Escribir;
+		
+	Reparti<<"\n=================================================================\n\n";
 	
 	Reparti.close();
 	
@@ -92,20 +90,16 @@ void Interfaz::LeerRepartidores(){
 	
 }
 
-void Interfaz::GuardaClientes(){
+void Interfaz::GuardaClientes(Cliente *Nuevo){
 	
-	NodoCliente *Aux = Clientes->get_head();
 	string Escribir;
 	
 	
 	ofstream Client("./Cliente/Lista/ListaClientes.txt",ios::app);
 	
-	while(Aux!=NULL){
-		Escribir= Aux->get_cliente()->TostringCliente();
-		Client<<Escribir;
-		Client<<"\n=================================================================\n\n";
-		Aux=Aux->get_siguiente();
-	}
+	Escribir= Nuevo->TostringCliente();
+	Client<<Escribir;
+	Client<<"\n=================================================================\n\n";
 	
 	Client.close();
 	
@@ -158,7 +152,6 @@ void Interfaz::LeerPedidos(string id){
 		Escribir.append("\n");
 		cout<<Escribir;
 	}
-	
 	Pedi.close();
 	
 }
@@ -177,5 +170,31 @@ void Interfaz::Client_MayorP(){
 		Aux=Aux->get_siguiente();
 	}
 	cout<<ElMayor<<"\n";
+	
+}
+void Interfaz::queja(string id, string recla){
+	
+	ofstream reclamo("./Quejas/"+id+".txt",ios::app); 
+	
+	
+	reclamo<<'-'<<recla<<"\n\n";
+	
+	reclamo.close();
+	
+}
+void Interfaz::leer_queja(string id){
+	
+	string impri;
+	
+	ifstream reclamo("./Quejas/"+id+".txt",ios::in);
+	
+	while(!reclamo.eof()){
+		
+		getline(reclamo, impri);
+		cout<<impri<<endl;
+		
+	}
+	
+	reclamo.close();
 	
 }

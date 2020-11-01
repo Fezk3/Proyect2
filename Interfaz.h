@@ -21,12 +21,14 @@ public:
 	/*void GuardaRestaurante();
 	void LeerRestaurante();*/
 	
-	void GuardaRepartidores();
+	void GuardaRepartidores(Repartidor *);
 	void LeerRepartidores();
-	void GuardaClientes();
+	void GuardaClientes(Cliente *);
 	void LeerClientes();
 	void GuardaPedidos(string id, Pedido *L);
 	void LeerPedidos(string id);
+	void queja(string,string);
+	void leer_queja(string);
 	void Client_MayorP();
 	
 };

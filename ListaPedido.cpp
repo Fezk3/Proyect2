@@ -107,7 +107,7 @@ Pedido *ListaPedido::pedido(){
 	
 	while(aux!=NULL){
 		
-		if(aux->get_pedido()->get_estado() == "en preparacion"){
+		if(aux->get_pedido()->get_estado() == "En preparacion"){
 			
 			return aux->get_pedido();
 			
@@ -118,3 +118,20 @@ Pedido *ListaPedido::pedido(){
 	}
 	
 }
+bool ListaPedido::verifica_estado(string id){
+	
+	NodoPedido *aux = head;
+	
+	while(aux!=NULL){
+		
+		if((aux->get_pedido()->get_estado() == "En preparacion"&&aux->get_pedido()->get_id_clie()==id)||(aux->get_pedido()->get_estado()== "Suspendido"&&aux->get_pedido()->get_id_clie()==id)||(aux->get_pedido()->get_estado() == "En camino"&&aux->get_pedido()->get_id_clie()==id)){
+			
+			return true;
+			
+		}
+		
+		aux = aux->get_sig_pedido();
+	}
+	return false;
+}
+

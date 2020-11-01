@@ -12,9 +12,10 @@ Control::Control(){
 	Repartidor* r2 = new Repartidor("Kevin", "465454", "34586", "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
 	Repartidor* r3 = new Repartidor("Warner", "4gseg564", "14586", "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
 	
-	Pedido* p1 = new Pedido("402540125","Popeyes",c1->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:12","12:30");
+	Pedido* p1 = new Pedido("402540125","Popeyes",c1->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:12","_:_");
 	Pedido* p2 = new Pedido("902540125","Popeyes",c2->get_direccion(),"Entregado","8x Alitas 6000\n",6780,"11:12","12:30");
 	Pedido* p3 = new Pedido("202540125","Popeyes",c3->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:55","01:00");
+	
 	
 	Menu = new Interfaz(p1,p2,p3,r1,r2,r3,c1,c2,c3);
 	
@@ -109,6 +110,7 @@ void Control::menu_cliente(){
 		Sleep(3600);
 		Cliente *c11 = new Cliente(Nombre,verificar,NumTel,NumTarje,true,Correo,Ubica,0);
 		Menu->Clientes->Agregar(c11);
+		Menu->GuardaClientes(c11);
 		
 		do{
 			Cliente *Inscrito = Menu->Clientes->user(verificar);
@@ -706,7 +708,7 @@ void Control::menu_cliente(){
 	}else{
 		do{
 			Cliente *Inscrito = Menu->Clientes->user(verificar);
-			if(menu=="1"){
+			if(Menu->Pedidos->verifica_estado(Inscrito->get_cedula())==false){
 				system("cls");
 				cout<<"=============Restaurantes===========\n";
 				cout<<Menu->Restau->mostrar_lista();
@@ -1408,8 +1410,9 @@ void Control::menu_repartidor(){
 								
 								//creando objeto Repartidor en ejecucion y agregando a lista
 								
-								Repartidor *r1 = new Repartidor(nombre, id, num_tel, tarje, est, correo, direc, kilo, amonesta); 
-								Menu->Repartidores->agregar_reparti(r1);
+								Repartidor *r11 = new Repartidor(nombre, id, num_tel, tarje, est, correo, direc, kilo, amonesta); 
+								Menu->Repartidores->agregar_reparti(r11);
+								Menu->GuardaRepartidores(r11);
 								cout<<"Su usuario fua aniadido exitosamente"<<endl;
 								system("pause");
 								system("cls");
@@ -1605,7 +1608,7 @@ void Control::menu_repartidor(){
 			}else{
 				
 				cout<<"Saliendo"<<endl;
-				exit(1);
+				break;
 				
 			}
 			
@@ -1620,7 +1623,181 @@ void Control::menu_repartidor(){
 	} while(iwi!="2");
 	
 }
+void Control::menu_admin(){
+	
+	string op, id;
+	
+	do{
+		
+		cout<<"Bienvenido: Administrador"<<endl;
+		
+		cout<<"Escoga la accion que desea realizar: "<<endl;
+		
+		cout<<"\n1. Ver la lista de clientes"<<endl;
+		cout<<"2. Ver la lista de repartidores"<<endl;
+		cout<<"3. Ver los pedidos de un cliente en especifico"<<endl;
+		cout<<"4. Ver la lista de quejas de un repartidor en especifico"<<endl;
+		cout<<"5. Ver Restaurante con mayor numero de envios"<<endl;
+		cout<<"6. Ver Restaurante con menor numero de envios"<<endl;
+		cout<<"7. Ver el total de dinero vendido por cada Restaurante"<<endl;
+		cout<<"8. Ver Total vendido por todos los Restaurantes"<<endl;
+		cout<<"9. Ver cliente con mas pedidos"<<endl;
+		cout<<"10. Ver hora en la que se realizaron mas pedidos"<<endl;
+		cout<<"11. Salir"<<endl;
+		cin>>op;
+		system("pause");
+		system("cls");
+		
+		try{
+			
+			if(op!="1"&&op!="2"&&op!="3"&&op!="4"&&op!="5"&&op!="6"&&op!="7"&&op!="8"&&op!="9"&&op!="10"&&op!="11"){
+				
+				throw(op);
+				
+			}
+			
+			switch(stoi(op)){
+				
+			case 1:
+				
+				cout<<"Lista de clientes: "<<endl;
+				Menu->LeerClientes();
+				system("pause");
+				system("cls");
+				break;
+				
+			case 2:
+				
+				cout<<"Lista de repartidores: "<<endl;
+				Menu->LeerRepartidores();
+				system("pause");
+				system("cls");
+				break;
+				
+			case 3:
+				
+				cout<<"Para ver los pedidos de un cliente, digite el id de dicho cliente: "<<endl;
+				cin>>id;
+				
+				if(Menu->Clientes->checkC(id)==true){
+					
+					Menu->LeerPedidos(id);
+					system("pause");
+					system("cls");
+					break;
+					
+				}else{
+					
+					cout<<"Cedula no registrada"<<endl;
+					break;
+					
+				}
+				
+			case 4:
+				   
+				   cout<<"Para ver la lista de quejas de un repartidor, digite el id de dicho repartidor"<<endl;
+				   cin>>id;
+				   
+				   if(Menu->Repartidores->checkR(id)==true){
+					   
+					   //Menu->leer_queja(id);
+					   system("pause");
+					   system("cls");
+					   break;
+					   
+					   
+				   }else{
+					   
+					   cout<<"Cedula de repartidor no registrada"<<endl;
+					   break;
+					   
+				   }
+				   
+				   break;
+				   
+			case 5:
+				
+				cout<<"El restaurante con mas pedidos es: "<<Menu->Restau->mas_pedidos()<<endl;
+				
+				system("pause");
+				system("cls");
+				
+				break;
+				
+			case 6:
+				
+				cout<<"El resturante con menos pedidos es: "<<Menu->Restau->menos_pedidos()<<endl;
+				
+				system("pause");
+				system("cls");
+				
+				break;
+				
+			case 7:
+				
+				cout<<"Detalle del total vendido por cada Restaurante: "<<endl;
+				
+				cout<<Menu->Restau->total_resta();
+				
+				system("pause");
+				system("cls");
+				
+				break;
+				
+			case 8:
+				
+				cout<<"El total de dinero recaudado por todos los restaurantes es de: "<<Menu->Restau->total_all()<<endl;
+				
+				system("pause");
+				system("cls");
+				
+				break;
+				
+			case 9:
+				
+				cout<<"El cliente con mas pedidos es: "<<endl;
+				
+				Menu->Client_MayorP();
+				
+				system("pause");
+				system("cls");
+				
+				break;
+				
+			case 10:
+				
+				Menu->Pedidos->hora_pico();
+				cout<<"\n"<<endl;
+				
+				system("pause");
+				system("cls");
+				
+				break;
+				
+			case 11:
+				
+				cout<<"Saliendo..."<<endl;
+				system("pause");
+				exit(1);
+				
+			default:
+				
+				cout<<"Opcion invalida"<<endl;
+				break;
+				
+			}
+			
+		}catch(string op){
+			
+			cout<<"Opcion invalida"<<endl;
+			system("pause");
+			system("cls");
+			
+		}
+		
+		
+	} while(op!="11");	
+	
+}
 Control::~Control(){
-	Menu->GuardaClientes();
-	Menu->GuardaRepartidores();
 }
