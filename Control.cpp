@@ -1810,6 +1810,41 @@ void Control::menu_admin(){
 }
 void Control::menu_quejas(){
 	
+	string verificar;
+	string contenido="";
+	
+	
+	cout<<"==========================================\n";
+	cout<<"Digite su ID: ";
+	cin>>verificar;
+	if(Menu->Clientes->BuscarCliente(verificar)==false){
+		system("cls");
+		cout<<"==========================================\n";
+		cout<<"El id no esta registrado, volviendo al menu\n";
+		cout<<"==========================================\n";
+		Sleep(1600);
+	}else{
+		NodoPedido *Ver_Ultimo_Ped = Menu->Pedidos->get_head();
+		
+		Pedido *Queja = NULL;
+		
+		while(Ver_Ultimo_Ped!=NULL){
+			if(Ver_Ultimo_Ped->get_pedido()->get_id_clie()==verificar&&Ver_Ultimo_Ped->get_pedido()->get_estado()=="Entregado"){
+				Queja = Ver_Ultimo_Ped->get_pedido();
+			}
+			Ver_Ultimo_Ped = Ver_Ultimo_Ped->get_sig_pedido();
+		}
+		if(Ver_Ultimo_Ped==NULL){
+			cout<<"No ha realizado ningun Pedido\n";
+		}else{
+			string id_repa = Queja->get_id_reparti();
+			cout<<"================================\n";
+			cout<<"Presentacion: ";
+			
+			cout<<"Amabilidad :";
+		} 
+		
+	}
 	
 	
 }
