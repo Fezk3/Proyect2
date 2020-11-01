@@ -1808,5 +1808,10 @@ void Control::menu_admin(){
 	} while(op!="11");	
 	
 }
+void Control::menu_quejas(){
+	
+	
+	
+}
 Control::~Control(){
 }

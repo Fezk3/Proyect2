@@ -137,6 +137,9 @@ string Pedido::tostring_pedido() {  //concatenar el combo en main y enviarlo
 	stringstream x;
 	
 	x << "Id: " << get_id() << endl;
+	x << "Cliente: " << get_id_clie() << endl;
+	x << "Repartidor: " << get_id_reparti() << endl;
+	x << "Direccion: " << get_cli_direcc() << endl;
 	x << "Restaurante: "<<get_nombre_rest() << endl;
 	x << "Estado: " << get_estado() << endl;
 	x << "Pedido: \n" << get_contenido() << endl;

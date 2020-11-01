@@ -15,7 +15,7 @@ tab_width=4
 tab_use_spaces=0
 explorer_path=.
 inherits_from=
-current_source=Control.cpp
+current_source=Control.h
 path_char=\
 [source]
 path=main.cpp
@@ -23,7 +23,7 @@ cursor=56:4
 open=true
 [source]
 path=Control.cpp
-cursor=12:77
+cursor=1812:1
 open=true
 [source]
 path=Restaurante.cpp
@@ -75,7 +75,7 @@ cursor=141:17
 open=true
 [source]
 path=Pedido.cpp
-cursor=16:22
+cursor=141:40
 open=true
 [source]
 path=Combo.cpp
@@ -87,7 +87,7 @@ cursor=19:1
 open=true
 [header]
 path=Control.h
-cursor=13:19
+cursor=5:0
 open=true
 [header]
 path=Restaurante.h
