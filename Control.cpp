@@ -1811,6 +1811,7 @@ void Control::menu_admin(){
 void Control::menu_quejas(){
 	
 	string verificar;
+	string Num;
 	string contenido="";
 	
 	
@@ -1834,14 +1835,27 @@ void Control::menu_quejas(){
 			}
 			Ver_Ultimo_Ped = Ver_Ultimo_Ped->get_sig_pedido();
 		}
-		if(Ver_Ultimo_Ped==NULL){
+		if(Queja==NULL){
+			cout<<"================================\n";
 			cout<<"No ha realizado ningun Pedido\n";
+			cout<<"================================\n";
+			Sleep(3600);
 		}else{
 			string id_repa = Queja->get_id_reparti();
 			cout<<"================================\n";
 			cout<<"Presentacion: ";
-			
-			cout<<"Amabilidad :";
+			cin>>Num;
+			contenido.append("Presentacion: "+Num+"\n");
+			cout<<"Amabilidad: ";
+			cin>>Num;
+			contenido.append(" Amabilidad: "+Num+"\n");
+			cout<<"Tiempo de espera: ";
+			cin>>Num;
+			contenido.append(" Tiempo de espera: "+Num+"\n");
+			cout<<"General: ";
+			cin>>Num;
+			contenido.append(" General: "+Num+"\n");
+			Menu->queja(id_repa,contenido);
 		} 
 		
 	}

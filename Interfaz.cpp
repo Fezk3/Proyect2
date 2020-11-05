@@ -174,10 +174,11 @@ void Interfaz::Client_MayorP(){
 }
 void Interfaz::queja(string id, string recla){
 	
-	ofstream reclamo("./Quejas/"+id+".txt",ios::app); 
+	ofstream reclamo("./Repartidores/Quejas/"+id+".txt",ios::app); 
 	
 	
-	reclamo<<'-'<<recla<<"\n\n";
+	reclamo<<'-'<<recla<<"\n";
+	reclamo<<"==========================\n";
 	
 	reclamo.close();
 	
@@ -186,7 +187,7 @@ void Interfaz::leer_queja(string id){
 	
 	string impri;
 	
-	ifstream reclamo("./Quejas/"+id+".txt",ios::in);
+	ifstream reclamo("./Repartidores/Quejas/"+id+".txt",ios::in);
 	
 	while(!reclamo.eof()){
 		

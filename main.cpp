@@ -13,8 +13,8 @@ int main() {
 			system("cls");
 			cout<<"Digite que tipo de usuario es usted: "<<endl;
 			cout<<"1. Cliente"<<endl;
-			cout<<"2. Queja"<<endl;
-			cout<<"3. Repartidor"<<endl;
+			cout<<"2. Repartidor"<<endl;
+			cout<<"3. Queja"<<endl;
 			cout<<"4. Admin"<<endl;
 			cout<<"5. Salir"<<endl;
 			cin>>op;
@@ -36,10 +36,10 @@ int main() {
 					break;
 				case 3:
 					system("cls");
-					cout<<"Abriendo el menu de Administradores...\n";
+					cout<<"Abriendo el menu de Quejas...\n";
 					Sleep(1600);
 					system("cls");
-					c1->menu_admin();
+					c1->menu_quejas();
 					break;
 				case 4:
 					system("cls");
