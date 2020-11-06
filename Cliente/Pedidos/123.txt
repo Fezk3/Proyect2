@@ -1,0 +1,33 @@
+Id: 4
+Cliente: 123
+Repartidor: 12
+Direccion: tyjtyj
+Restaurante: Dominos
+Estado: Entregado
+Pedido: 
+Combo: Campinia                  Precio: 6000
+Combo: Campinia                  Precio: 6000
+Combo: Campinia                  Precio: 6000
+Combo: Campinia                  Precio: 6000
+Combo: Campinia                  Precio: 6000
+
+Hora de preparacion: 11:00
+Hora de entrega: _:_
+
+=================================================================
+
+Id: 4
+Cliente: 123
+Repartidor: 123
+Direccion: hfghfg
+Restaurante: Bygys
+Estado: Entregado
+Pedido: 
+Combo: 6 Alitas                  Precio: 5000
+Combo: 8 Alitas                  Precio: 6000
+
+Hora de preparacion: 11:00
+Hora de entrega: _:_
+
+=================================================================
+

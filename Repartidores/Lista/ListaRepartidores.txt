@@ -34,3 +34,75 @@ Numero de amonestaciones: 4
 
 =================================================================
 
+Nombre: uwu
+Cedula: 123
+Numero telefonico: 4324
+Numero de tarjeta: dfgdf
+Estado: Ocupado
+Correo: bfdhdf
+Direccion: ergerg
+Numero de kms diario: 0
+Numero de amonestaciones: 0
+
+=================================================================
+
+Nombre: yrth
+Cedula: 12
+Numero telefonico: trhrth
+Numero de tarjeta: trhrth
+Estado: Ocupado
+Correo: trhrthrt
+Direccion: trhrth
+Numero de kms diario: 0
+Numero de amonestaciones: 0
+
+=================================================================
+
+Nombre: fdg
+Cedula: 123
+Numero telefonico: fdgdfg
+Numero de tarjeta: dfg
+Estado: Ocupado
+Correo: dfgdfg
+Direccion: fdgdfg
+Numero de kms diario: 0
+Numero de amonestaciones: 0
+
+=================================================================
+
+Nombre: uwu
+Cedula: 123
+Numero telefonico: 3132
+Numero de tarjeta: 56151
+Estado: Ocupado
+Correo: thfth
+Direccion: hjhj
+Numero de kms diario: 0
+Numero de amonestaciones: 0
+
+=================================================================
+
+Nombre: uwu
+Cedula: 12
+Numero telefonico: gfhfg
+Numero de tarjeta: gfhfgh
+Estado: Ocupado
+Correo: fghfgh
+Direccion: fghfgh
+Numero de kms diario: 0
+Numero de amonestaciones: 0
+
+=================================================================
+
+Nombre: owo
+Cedula: 12
+Numero telefonico: 1243234
+Numero de tarjeta: efwef
+Estado: Ocupado
+Correo: 23f23
+Direccion: r23r
+Numero de kms diario: 0
+Numero de amonestaciones: 0
+
+=================================================================
+

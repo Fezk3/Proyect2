@@ -33,3 +33,36 @@ Pedidos realizados: 4
 
 =================================================================
 
+Nombre: ytutyu
+Cedula: 123
+Numero telefonico: ytjtyj
+Numero de tarjeta: jtyjytj
+Estado: Disponible
+Correo: tyjtyj
+Direccion: tyjtyj
+Pedidos realizados: 0
+
+=================================================================
+
+Nombre: dfdsf
+Cedula: 123
+Numero telefonico: ghfgh
+Numero de tarjeta: gfhfghfg
+Estado: Disponible
+Correo: gfhfgh
+Direccion: hfghfg
+Pedidos realizados: 0
+
+=================================================================
+
+Nombre: owo
+Cedula: 402540125
+Numero telefonico: gfhfgh
+Numero de tarjeta: fghfgh
+Estado: Disponible
+Correo: fghfghf
+Direccion: hgfhfgh
+Pedidos realizados: 0
+
+=================================================================
+

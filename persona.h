@@ -8,7 +8,7 @@ using namespace std;
 class Persona 
 {
 	
-private:
+public:
 	
 	string nombre;
 	string cedula;
@@ -17,8 +17,6 @@ private:
 	bool estado;
 	string correo;
 	string direccion;
-	
-public:
 	
 	Persona();
 	Persona(string, string, string, string, bool, string, string);

@@ -2,6 +2,7 @@
 #define REPARTIDOR_H
 #include "Persona.h"
 #include "Pedido.h"
+#include <fstream>
 
 //#include "Pedido.h"   para hacer set al estado del pedido
 
@@ -18,6 +19,7 @@ private:
 	
 public:
 	
+	Repartidor();
 	Repartidor(string nombre, string num_cedula, string num_tel, string num_tarje, bool estado, string correo, string direccion,float num_kms_diario, int num_amonesta);
 	~Repartidor();
 	
@@ -39,6 +41,12 @@ public:
 	//tostring
 	
 	string tostringRepa();
+	
+	//autos
+	
+	void autosave(ofstream&);
+	Repartidor& autoread(ifstream&);
+	
 	
 };
 

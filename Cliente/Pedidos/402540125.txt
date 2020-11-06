@@ -25,3 +25,19 @@ Hora de entrega: _:_
 
 =================================================================
 
+Id: 4
+Cliente: 402540125
+Repartidor: 12
+Direccion: hgfhfgh
+Restaurante: Wendys
+Estado: Entregado
+Pedido: 
+Combo: Baconator                  Precio: 5000
+Combo: Baconator                  Precio: 5000
+Combo: Baconator                  Precio: 5000
+
+Hora de preparacion: 11:00
+Hora de entrega: _:_
+
+=================================================================
+

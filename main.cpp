@@ -8,6 +8,8 @@ int main() {
 	
 	string op="";
 	
+	c1->cargarlistas();
+	
 	do{
 		try{
 			system("cls");
@@ -51,15 +53,25 @@ int main() {
 				case 5:
 					cout<<"Saliendo...\n";
 					Sleep(1600);
-					exit(0);
 					break;
+				default:
+					
+					cout<<"Opcion invalida"<<endl;
+					system("pause");
+					system("cls");
+					
 				}
+				
 			}
 		}
 		catch(string op){
+			
 			cout<<"No digito una opcion valida\n";
+			
 		}
-	}while(true);
+	}while(op!="5");
+	
+	c1->guardarlistas();
 	
 	delete c1;
 	

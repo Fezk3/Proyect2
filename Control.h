@@ -15,6 +15,11 @@ public:
 	void menu_admin();
 	virtual ~Control();
 	
+	//listas 
+	
+	void guardarlistas();
+	void cargarlistas();
+	
 };
 	
 #endif

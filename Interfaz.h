@@ -31,6 +31,12 @@ public:
 	void leer_queja(string);
 	void Client_MayorP();
 	
+	//archivos
+	
+	void guardar_listas();
+	void cargar_lista_cliente();
+	void cargar_lista_reparti();
+	
 };
 
 #endif

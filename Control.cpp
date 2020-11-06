@@ -1,7 +1,5 @@
 #include "Control.h"
 
-
-
 Control::Control(){
 	
 	Cliente* c1 = new Cliente("Emanuel","402540125","8798746","9999w",true,"Ema2821@gmail.com","Heredia",5);
@@ -1317,8 +1315,6 @@ void Control::menu_cliente(){
 		}while(salir!=1);
 	}
 	
-	
-	
 }
 
 void Control::menu_repartidor(){
@@ -1457,6 +1453,15 @@ void Control::menu_repartidor(){
 							
 							if(op2=="1"){  //si acepta el pedido
 								
+								if(uwu->get_num_amonesta() > 4 || uwu->get_estado()==false){ 
+									
+									cout<<"Lo sentimos, pero debido a su numero de amonestaciones no puede realizar entregas"<<endl;
+									system("pause");
+									system("cls");
+									break;
+									
+								}
+								
 								//Pedido *owo = Menu->Pedidos->pedido();
 								precio = owo->get_precio();  //obtengo precio del pedido
 								cout<<"El pedido disponible para aceptar la entrega es: "<<owo->tostring_pedido()<<endl;
@@ -1565,6 +1570,9 @@ void Control::menu_repartidor(){
 							if(op5=="1"){ //si lo entrega
 								
 								int tot = kem * costo_km_habil;
+								int km = uwu->get_num_kms_diario();
+								km += kem;
+								uwu->set_num_kms_diario(km);  //aumento de los km recorridos
 								
 								cout<<"Usted ha pasado el estado del pedido a entregado: "<<endl;
 								cout<<"El numero de Kilometros recorridos fue de: "<<kem<<endl;
@@ -1580,7 +1588,7 @@ void Control::menu_repartidor(){
 								
 								uwu->set_estado(false);
 								
-								cout<<"\n\nLos "<<tot<<"seran depositados en su tarjeta n:"<<uwu->get_num_tarje()<<endl;
+								cout<<"\n\nLos "<<tot<<" seran depositados en su tarjeta n:"<<uwu->get_num_tarje()<<endl;
 								system("pause");
 								system("cls");
 								break;
@@ -1839,7 +1847,7 @@ void Control::menu_quejas(){
 			cout<<"================================\n";
 			cout<<"No ha realizado ningun Pedido\n";
 			cout<<"================================\n";
-			Sleep(3600);
+			Sleep(1600);
 		}else{
 			string id_repa = Queja->get_id_reparti();
 			cout<<"================================\n";
@@ -1863,4 +1871,102 @@ void Control::menu_quejas(){
 	
 }
 Control::~Control(){
+}
+
+void Control::guardarlistas(){
+	
+	string op;
+	
+	do{
+		
+		cout<<"Desea guardar las listas utilizadas en esta seccion?"<<endl;
+		cout<<"1. Si     ||      2. No"<<endl;
+		cin>>op;
+		system("pause");
+		system("cls");
+		
+		try{
+			
+			if(op=="1"){
+				
+				Menu->guardar_listas();
+				cout<<"Listas guardadas con exito"<<endl;
+				system("pause");
+				system("cls");
+				break;
+				
+			}else if(op=="2"){
+				
+				cout<<"No se han guardado las listas"<<endl;
+				system("pause");
+				system("cls");
+				break;
+				
+			}else{
+				
+				cout<<"Opcion invalida"<<endl;
+				system("pause");
+				system("cls");
+				
+			}
+			
+		}catch(string op){
+			
+			cout<<"Opcion invalida";
+			system("pause");
+			system("cls");
+			
+		}
+		
+	}while(op!="2");
+	
+}
+
+void Control::cargarlistas(){
+	
+	string op;
+	
+	do{
+		
+		cout<<"Desea cargar las listas de Clientes y Repartidores almacenadas?"<<endl;
+		cout<<"1. Si     ||      2. No"<<endl;
+		cin>>op;
+		system("pause");
+		system("cls");
+		
+		try{
+			
+			if(op=="1"){
+				
+				Menu->cargar_lista_cliente();
+				Menu->cargar_lista_reparti();
+				
+				cout<<"Listas cargadas con exito"<<endl;
+				system("pause");
+				system("cls");
+				break;
+				
+			}else if(op=="2"){
+				
+				cout<<"No se han cargado las listas"<<endl;
+				break;
+				
+			}else{
+				
+				cout<<"Opcion invalida";
+				system("pause");
+				system("cls");
+				
+			}
+			
+		}catch(string op){
+			
+			cout<<"Opcion invalida";
+			system("pause");
+			system("cls");
+			
+		}
+		
+	}while(op!="2");
+	
 }
