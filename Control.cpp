@@ -1949,6 +1949,8 @@ void Control::cargarlistas(){
 			}else if(op=="2"){
 				
 				cout<<"No se han cargado las listas"<<endl;
+				system("pause");
+				system("cls");
 				break;
 				
 			}else{

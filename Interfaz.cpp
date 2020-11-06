@@ -244,14 +244,11 @@ void Interfaz::cargar_lista_cliente(){
 	
 	ifstream z;
 	
-	//ListaClientes *nueva = new ListaClientes();
-	
 	z.open("listacliente.txt");
 	
 	if(!z || z.good() == false){
 		
 		z.close();
-		//Clientes =  new ListaClientes();
 		
 	}else{
 		
@@ -283,14 +280,11 @@ void Interfaz::cargar_lista_reparti(){
 	
 	ifstream z;
 	
-	//ListaReparti *nuevaR = new ListaReparti();
-	
 	z.open("listareparti.txt");
 	
 	if(!z || z.good() == false){
 		
 		z.close();
-		//Repartidores = new ListaReparti();
 		
 	}else{
 		
