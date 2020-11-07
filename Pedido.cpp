@@ -2,7 +2,7 @@
 
 int Pedido::num = 1;
 
-Pedido::Pedido(string id_clie,string nombre_rest,string cli_direcc,string estado, string contenido, double precio, string hora_inicio, string hora_final,string id_reparti) {
+Pedido::Pedido(string id_clie,string nombre_rest,string cli_direcc,string estado, string contenido, double precio,string id_reparti) {
 	
 	int num_pedido = num;
 	this->id_clie=id_clie;
@@ -12,10 +12,9 @@ Pedido::Pedido(string id_clie,string nombre_rest,string cli_direcc,string estado
 	this->estado = estado;
 	this->id = num_pedido;
 	this->precio = precio;
-	this->hora_inicio = hora_inicio;
-	this->hora_final = hora_final;
 	this->id_reparti = id_reparti;
-	
+	this->hora_final="";
+	this->hora_inicio="";
 	num ++;
 	
 }
@@ -65,14 +64,18 @@ void Pedido::set_precio(double precio) {
 	this->precio = precio;
 	
 }
-void Pedido::set_hora_ini(string hora_ini) {
+void Pedido::set_hora_ini() {
 	
-	this->hora_inicio = hora_ini;
+	string  hour=to_string(ObtineHora());
+	string mins=to_string(ObtineMinutos());
+	string Com = hour+":"+mins;
+	this->hora_inicio = Com;
 	
 }
-void Pedido::set_hora_fin(string hora_fin) {
+void Pedido::set_hora_fin() {
 	
-	this->hora_final = hora_final;
+
+	this->hora_final = ObtineHora()+":"+ObtineMinutos();
 	
 }
 
@@ -143,9 +146,31 @@ string Pedido::tostring_pedido() {  //concatenar el combo en main y enviarlo
 	x << "Restaurante: "<<get_nombre_rest() << endl;
 	x << "Estado: " << get_estado() << endl;
 	x << "Pedido: \n" << get_contenido() << endl;
-	x << "Hora de preparacion: " << get_hora_ini() << endl;
-	x << "Hora de entrega: " << get_hora_fin() << endl;
+	x << "Hora de preparacion: " << hora_inicio << endl;
+	x << "Hora de entrega: " << hora_final << endl;
 
 	return x.str();
 	
 }
+
+int Pedido::ObtineHora( ) {
+	
+	int hora=0;
+	time_t now=time(0);
+	tm * time=localtime(&now);
+	
+	hora=time->tm_hour;
+	
+	return hora;
+	
+}
+int Pedido::ObtineMinutos( ) {
+	int minutos=0;
+	time_t now=time(0);
+	tm * time=localtime(&now);
+	
+	minutos=time->tm_min;
+	
+	return minutos;
+}
+

@@ -1,5 +1,8 @@
 #ifndef PEDIDO_H
 #define PEDIDO_H
+#include <chrono>
+#include <ctime>
+#include <string>
 #include <iostream>
 #include <sstream>
 
@@ -23,7 +26,7 @@ private:
 	
 public:
 	
-	Pedido(string,string,string,string, string, double, string, string,string);
+	Pedido(string,string,string,string, string, double,string);
 	~Pedido();
 	
 	//sets
@@ -36,8 +39,8 @@ public:
 	void set_id(int id);
 	void set_contenido(string contenido);
 	void set_precio(double precio);
-	void set_hora_ini(string hora_inicio);
-	void set_hora_fin(string hora_final);
+	void set_hora_ini();
+	void set_hora_fin();
 	
 	//gets
 	
@@ -55,6 +58,8 @@ public:
 	//methods
 	
 	string tostring_pedido();
+	int ObtineHora();
+	int ObtineMinutos();
 	
 };
 

@@ -15,7 +15,7 @@ tab_width=4
 tab_use_spaces=0
 explorer_path=.
 inherits_from=
-current_source=Control.cpp
+current_source=Pedido.cpp
 path_char=\
 [source]
 path=main.cpp
@@ -23,13 +23,11 @@ cursor=62:5
 open=true
 [source]
 path=Control.cpp
-cursor=195:60
-breakpoint=195
-breakpoint_annotation=
+cursor=824:33
 open=true
 [source]
 path=Restaurante.cpp
-cursor=103:16
+cursor=104:1
 breakpoint=104
 breakpoint_annotation=
 open=true
@@ -47,7 +45,7 @@ cursor=147:27
 open=true
 [source]
 path=ListaPedido.cpp
-cursor=136:0
+cursor=119:1
 open=true
 [source]
 path=ListaReparti.cpp
@@ -79,7 +77,13 @@ cursor=2:19
 open=true
 [source]
 path=Pedido.cpp
-cursor=141:40
+cursor=70:27
+breakpoint=70
+breakpoint_annotation=
+breakpoint=69
+breakpoint_annotation=
+breakpoint=68
+breakpoint_annotation=
 open=true
 [source]
 path=Combo.cpp
@@ -143,7 +147,7 @@ cursor=17:10
 open=true
 [header]
 path=Pedido.h
-cursor=32:1
+cursor=4:16
 open=true
 [header]
 path=Combo.h

@@ -190,7 +190,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"");
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[0]->AumentarRes(total);
@@ -202,7 +203,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"\nGracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -270,9 +271,10 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");											
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"");											
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
-														Inscrito->Aumentar();
+														Inscrito->Aumentar(); 
 														Menu->Restau->contenedor[1]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
@@ -282,7 +284,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -350,7 +352,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[2]->AumentarRes(total);
@@ -362,7 +365,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														break;
 													}
 												}
@@ -429,7 +432,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"11:19","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[3]->AumentarRes(total);
@@ -441,7 +445,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														break;
 													}
 												}
@@ -508,7 +512,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[4]->AumentarRes(total);
@@ -520,7 +525,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"\nGracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -588,7 +593,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[6]->AumentarRes(total);
@@ -600,7 +606,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -668,7 +674,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00 am","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[6]->AumentarRes(total);
@@ -680,7 +687,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -814,7 +821,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[0]->AumentarRes(total);
@@ -826,7 +834,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -894,7 +902,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");											
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"");											
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[1]->AumentarRes(total);
@@ -906,7 +915,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"\nGracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -974,7 +983,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[2]->AumentarRes(total);
@@ -986,7 +996,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -1054,7 +1064,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[3]->AumentarRes(total);
@@ -1134,7 +1145,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00 am","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[4]->AumentarRes(total);
@@ -1146,7 +1158,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -1214,7 +1226,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[5]->AumentarRes(total);
@@ -1226,7 +1239,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -1294,7 +1307,8 @@ void Control::menu_cliente(){
 														break;
 													case 10:
 														total*=1.13;
-														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
+														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"");
+														P1->set_hora_ini();
 														Menu->Pedidos->agregar_pedido(P1);
 														Inscrito->Aumentar();
 														Menu->Restau->contenedor[6]->AumentarRes(total);
@@ -1306,7 +1320,7 @@ void Control::menu_cliente(){
 														cout<<"===========================\n";
 														cout<<"Gracias por su compra!\n";
 														cout<<"===========================\n";
-														Sleep(3600);
+														Sleep(1600);
 														salir=1;
 														break;
 													}
@@ -1615,9 +1629,9 @@ void Control::menu_repartidor(){
 								precio+=tot;
 								owo->set_precio(precio);
 								owo->set_estado("Entregado");
-								cout<<"Digite la hora en la que entrego el pedido: "<<endl;
-								getline(cin, hora);
-								owo->set_hora_fin(hora);
+								//cout<<"Digite la hora en la que entrego el pedido: "<<endl;
+								//getline(cin, hora);
+								owo->set_hora_fin();
 								
 								Menu->GuardaPedidos(owo->get_id_clie(),owo);
 								
