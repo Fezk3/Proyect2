@@ -1,6 +1,7 @@
 #ifndef LISTAPEDIDO_H
 #define LISTAPEDIDO_H
 #include "NodoPedido.h"
+#include <string>
 
 class ListaPedido {
 	

@@ -74,8 +74,10 @@ void Pedido::set_hora_ini() {
 }
 void Pedido::set_hora_fin() {
 	
-
-	this->hora_final = ObtineHora()+":"+ObtineMinutos();
+	string  hour=to_string(ObtineHora());
+	string mins=to_string(ObtineMinutos());
+	string Com = hour+":"+mins;
+	this->hora_final = Com;
 	
 }
 

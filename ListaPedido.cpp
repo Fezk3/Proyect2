@@ -74,6 +74,7 @@ void ListaPedido::hora_pico(){
 	
 	NodoPedido *aux = head;
 	int cont = 0;
+	int hora = 0;
 	
 	if(aux!=NULL){
 		
@@ -83,15 +84,15 @@ void ListaPedido::hora_pico(){
 		
 		while(aux!=NULL){
 			
-			//h_pico += aux->get_pedido()->get_hora_ini();
 			cont++;
+			hora += stoi(aux->get_pedido()->get_hora_ini());
 			aux = aux->get_sig_pedido();
 			
 		}
 		
 	}
 	
-	cout<<"La hora en la que se realizan mas pedidos es: 11";//h_pico/cont<<endl; 
+	cout<<"La hora en la que se realizan mas pedidos es: "<<hora/cont;//h_pico/cont<<endl; 
 	
 }
 
