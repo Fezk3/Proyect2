@@ -21,7 +21,7 @@ string ContenedorCombo::tostring_contene_combo(){
 	
 	for(int i=0;i<9;i++){
 		
-		x<<combos[i].tostring_combo()<<endl;
+		x<<i+1<<"-"<<combos[i].tostring_combo()<<endl;
 		
 	}
 	

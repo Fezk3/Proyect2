@@ -16,11 +16,10 @@ int main() {
 			cout<<"Digite que tipo de usuario es usted: "<<endl;
 			cout<<"1. Cliente"<<endl;
 			cout<<"2. Repartidor"<<endl;
-			cout<<"3. Queja"<<endl;
-			cout<<"4. Admin"<<endl;
-			cout<<"5. Salir"<<endl;
+			cout<<"3. Admin"<<endl;
+			cout<<"4. Salir"<<endl;
 			cin>>op;
-			if(op!="1"&&op!="2"&&op!="3"&&op!="4"&&op!="5"){
+			if(op!="1"&&op!="2"&&op!="3"&&op!="4"){
 				throw op;
 			}else{
 				switch(stoi(op)){
@@ -38,19 +37,12 @@ int main() {
 					break;
 				case 3:
 					system("cls");
-					cout<<"Abriendo el menu de Quejas...\n";
-					Sleep(1600);
-					system("cls");
-					c1->menu_quejas();
-					break;
-				case 4:
-					system("cls");
 					cout<<"Abriendo el menu de Administradores...\n";
 					Sleep(1600);
 					system("cls");
 					c1->menu_admin();
 					break;
-				case 5:
+				case 4:
 					cout<<"Saliendo...\n";
 					Sleep(1600);
 					break;
@@ -69,7 +61,7 @@ int main() {
 			cout<<"No digito una opcion valida\n";
 			
 		}
-	}while(op!="5");
+	}while(op!="4");
 	
 	c1->guardarlistas();
 	

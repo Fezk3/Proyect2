@@ -113,3 +113,8 @@ Repartidor& Repartidor::autoread(ifstream&z){
 	return(*new Repartidor(nombre1, cedula1, num_tel1, num_tarje1,estado1, correo1, direccion1, num_kms_diario1, num_amonesta1));
 	
 }
+
+void Repartidor::AmonestarMas ( ) {
+	num_amonesta++;
+}
+

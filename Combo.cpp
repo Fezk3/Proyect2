@@ -36,7 +36,7 @@ string Combo::tostring_combo(){
 	
 	stringstream x;
 	
-	x<<"Combo: "<<nombre<<"                  Precio: "<<precio<<endl;
+	x<<" "<<nombre<<"                  Precio: "<<precio<<endl;
 	
 	return x.str();
 	

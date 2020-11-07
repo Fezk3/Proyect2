@@ -11,7 +11,7 @@ public:
 	Control();
 	void menu_cliente();
 	void menu_repartidor();
-	void menu_quejas();
+	void menu_quejas(string);
 	void menu_admin();
 	virtual ~Control();
 	

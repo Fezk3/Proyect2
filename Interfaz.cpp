@@ -125,9 +125,6 @@ void Interfaz::LeerClientes(){
 
 void Interfaz::GuardaPedidos(string id, Pedido *L){
 	
-	Cliente *Aux = Clientes->user(id);
-	Aux->Aumentar();
-	
 	string Escribir;
 	
 	ofstream Pedi("./Cliente/Pedidos/"+id+".txt",ios::app);

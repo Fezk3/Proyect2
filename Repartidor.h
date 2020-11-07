@@ -37,6 +37,7 @@ public:
 	
 	void set_estado_pedido(string estado);
 	string get_estado_pedido();
+	void AmonestarMas();
 	
 	//tostring
 	
