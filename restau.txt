@@ -38,5 +38,5 @@ Taco Bell
 9452
 Heredia
 Rapida
-0
-0
+4
+1000

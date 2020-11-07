@@ -335,8 +335,39 @@ void Interfaz::guardar_restau(){
 
 void Interfaz::cargar_restau(){
 	
+	Restaurante *r1 = new Restaurante();
+	Restaurante *aux = new Restaurante();
 	
+	ifstream z;
 	
+	z.open("restau.txt");
 	
+	if(!z || z.good()!=true){
+		
+		z.close();
+		
+	}else{
+		
+		while(z.eof()!=true){
+			
+			for(int i=0;i<7;i++){
+				
+				r1 = &aux->autoread(z);
+				
+				if(r1->get_nombre() != ""){
+					
+					Restau->contenedor[i] = r1;
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	z.close();
+	
+	delete r1; delete aux;
 	
 }

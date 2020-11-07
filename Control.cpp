@@ -1941,6 +1941,7 @@ void Control::cargarlistas(){
 				
 				Menu->cargar_lista_cliente();
 				Menu->cargar_lista_reparti();
+				Menu->cargar_restau();
 				
 				cout<<"Listas cargadas con exito"<<endl;
 				system("pause");
