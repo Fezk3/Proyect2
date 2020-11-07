@@ -5,39 +5,6 @@ Pedido:
 4x Alitas 4000
 
 Hora de preparacion: 11:12
-Hora de entrega: _:_
+Hora de entrega: 01:30
 
 =================================================================
-
-Id: 4
-Restaurante: Wendys
-Estado: Entregado
-Pedido: 
-Combo: Dave's                  Precio: 4000
-Combo: Dave's                  Precio: 4000
-Combo: Baconator                  Precio: 5000
-Combo: 10 Nuggets                  Precio: 6000
-Combo: Classic Sandwitch                  Precio: 7000
-Combo: Grilled Sandwitch                  Precio: 8000
-
-Hora de preparacion: 11:00
-Hora de entrega: _:_
-
-=================================================================
-
-Id: 4
-Cliente: 402540125
-Repartidor: 12
-Direccion: hgfhfgh
-Restaurante: Wendys
-Estado: Entregado
-Pedido: 
-Combo: Baconator                  Precio: 5000
-Combo: Baconator                  Precio: 5000
-Combo: Baconator                  Precio: 5000
-
-Hora de preparacion: 11:00
-Hora de entrega: _:_
-
-=================================================================
-

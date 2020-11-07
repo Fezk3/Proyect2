@@ -27,7 +27,7 @@ ContenedorRest::~ContenedorRest(){
 string ContenedorRest::menos_pedidos(){
 	
 	int menos = contenedor[0]->get_cant_pedidos();
-	string menos1;
+	string menos1 = contenedor[0]->get_nombre();
 	
 	for(int i=1;i<7;i++){
 		
@@ -46,7 +46,7 @@ string ContenedorRest::menos_pedidos(){
 string ContenedorRest::mas_pedidos(){
 	
 	int mas = contenedor[0]->get_cant_pedidos();
-	string mas1;
+	string mas1 = "" ;
 	
 	for(int i=1;i<7;i++){
 		
@@ -55,6 +55,7 @@ string ContenedorRest::mas_pedidos(){
 			mas1 = contenedor[i]->get_nombre();
 			
 		}
+		if(i==6&&mas1==""&&mas!=0){mas1 = contenedor[0]->get_nombre();};
 		
 	}
 	

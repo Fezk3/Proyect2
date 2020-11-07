@@ -15,16 +15,16 @@ public:
 	ListaClientes* Clientes;
 	ListaPedido* Pedidos;
 	ListaReparti* Repartidores;
-	Interfaz(Pedido *, Pedido *, Pedido*, Repartidor *, Repartidor *, Repartidor *, Cliente *, Cliente *, Cliente *);
+	Interfaz();
 	virtual ~Interfaz();
 	
 	/*void GuardaRestaurante();
 	void LeerRestaurante();*/
 	
-	void GuardaRepartidores(Repartidor *);
+	/*void GuardaRepartidores(Repartidor *);
 	void LeerRepartidores();
 	void GuardaClientes(Cliente *);
-	void LeerClientes();
+	void LeerClientes();*/
 	void GuardaPedidos(string id, Pedido *L);
 	void LeerPedidos(string id);
 	void queja(string,string);

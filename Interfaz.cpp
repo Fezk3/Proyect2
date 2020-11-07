@@ -1,6 +1,6 @@
 #include "Interfaz.h"
 
-Interfaz::Interfaz(Pedido *p1, Pedido *p2, Pedido *p3, Repartidor *r1, Repartidor *r2, Repartidor *r3, Cliente *c1, Cliente *c2, Cliente *c3) {
+Interfaz::Interfaz() {
 	
 	Clientes = new ListaClientes();
 	Pedidos = new ListaPedido();
@@ -10,7 +10,7 @@ Interfaz::Interfaz(Pedido *p1, Pedido *p2, Pedido *p3, Repartidor *r1, Repartido
 	//Inicializando listas con objetos
 	
 	//Clientes->Agregar(c1); Clientes->Agregar(c2); Clientes->Agregar(c3); 
-	Pedidos->agregar_pedido(p1); Pedidos->agregar_pedido(p2); Pedidos->agregar_pedido(p3);
+	//Pedidos->agregar_pedido(p1); Pedidos->agregar_pedido(p2); Pedidos->agregar_pedido(p3);
 	//Repartidores->agregar_reparti(r1); Repartidores->agregar_reparti(r2); Repartidores->agregar_reparti(r3); 
 	
 }
@@ -53,7 +53,7 @@ cout<<Escribir;
 Resta.close();
 
 }
-*/
+
 
 void Interfaz::GuardaRepartidores(Repartidor *Nuevo){
 	
@@ -121,7 +121,7 @@ void Interfaz::LeerClientes(){
 	
 	Client.close();
 	
-}
+}*/
 
 void Interfaz::GuardaPedidos(string id, Pedido *L){
 	
@@ -205,8 +205,8 @@ void Interfaz::guardar_listas(){
 	ofstream cli;
 	ofstream rep;
 	
-	cli.open("listacliente.txt");
-	rep.open("listareparti.txt");
+	cli.open("./Cliente/Lista/ListaClientes.txt");
+	rep.open("./Repartidores/Lista/ListaRepartidores.txt");
 	
 	NodoCliente *aux1 = Clientes->get_head();
 	NodoReparti *aux2 = Repartidores->get_ini();
@@ -244,7 +244,7 @@ void Interfaz::cargar_lista_cliente(){
 	
 	ifstream z;
 	
-	z.open("listacliente.txt");
+	z.open("./Cliente/Lista/ListaClientes.txt");
 	
 	if(!z || z.good() == false){
 		
@@ -280,7 +280,7 @@ void Interfaz::cargar_lista_reparti(){
 	
 	ifstream z;
 	
-	z.open("listareparti.txt");
+	z.open("./Repartidores/Lista/ListaRepartidores.txt");
 	
 	if(!z || z.good() == false){
 		

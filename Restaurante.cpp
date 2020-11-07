@@ -101,6 +101,10 @@ double Restaurante::get_total(){
 	return total;
 	
 }
+void Restaurante::AumentarRes(double total2){
+	this-> cant_pedidos++;
+	this-> total+=total2;
+}
 
 //methods
 

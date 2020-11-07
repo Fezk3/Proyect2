@@ -2,7 +2,7 @@
 
 Control::Control(){
 	
-	Cliente* c1 = new Cliente("Emanuel","402540125","8798746","9999w",true,"Ema2821@gmail.com","Heredia",5);
+	/*Cliente* c1 = new Cliente("Emanuel","402540125","8798746","9999w",true,"Ema2821@gmail.com","Heredia",5);
 	Cliente* c2 = new Cliente("Jose","902540125","4646468","9999w",false,"Joseam89@gmail.com","Heredia",9);
 	Cliente* c3 = new Cliente("Marcos","202540125","65465412","9999w",true,"marsa46@gmail.com","Heredia",4);
 	
@@ -12,10 +12,10 @@ Control::Control(){
 	
 	Pedido* p1 = new Pedido("402540125","Popeyes",c1->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:12","_:_","4654564");
 	Pedido* p2 = new Pedido("902540125","Popeyes",c2->get_direccion(),"Entregado","8x Alitas 6000\n",6780,"11:12","12:30","4654564");
-	Pedido* p3 = new Pedido("202540125","Popeyes",c3->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:55","01:00","4654564");
+	Pedido* p3 = new Pedido("202540125","Popeyes",c3->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:55","01:00","4654564");*/
 	
 	
-	Menu = new Interfaz(p1,p2,p3,r1,r2,r3,c1,c2,c3);
+	Menu = new Interfaz();
 	
 	
 }
@@ -108,7 +108,6 @@ void Control::menu_cliente(){
 		Sleep(3600);
 		Cliente *c11 = new Cliente(Nombre,verificar,NumTel,NumTarje,true,Correo,Ubica,0);
 		Menu->Clientes->Agregar(c11);
-		Menu->GuardaClientes(c11);
 		
 		do{
 			Cliente *Inscrito = Menu->Clientes->user(verificar);
@@ -193,6 +192,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[0]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -271,6 +272,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");											
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[1]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -349,6 +352,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[2]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -426,6 +431,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"11:19","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[3]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -503,7 +510,18 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[4]->AumentarRes(total);
 														Finalizar=1;
+														system("cls");
+														cout<<"===========================\n";
+														cout<<"Orden: \n";
+														cout<<P1->tostring_pedido();
+														cout<<"===========================\n";
+														cout<<"\nGracias por su compra!\n";
+														cout<<"===========================\n";
+														Sleep(3600);
+														salir=1;
 														break;
 													}
 												}
@@ -565,13 +583,15 @@ void Control::menu_cliente(){
 														total+=Bugys.combos[7].get_precio();
 														break;
 													case 9:
-														conten.append(Bugys.combos[8].tostring_combo());
-														total+=Bugys.combos[8].get_precio();
+														conten.append(Bugys.combos[5].tostring_combo());
+														total+=Bugys.combos[5].get_precio();
 														break;
 													case 10:
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[6]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -650,6 +670,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00 am","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[6]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -794,6 +816,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[0]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -872,6 +896,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");											
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[1]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -950,6 +976,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[2]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -1028,6 +1056,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[3]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -1106,6 +1136,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00 am","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[4]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -1184,6 +1216,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[5]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -1262,6 +1296,8 @@ void Control::menu_cliente(){
 														total*=1.13;
 														Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"11:00","_:_","");										
 														Menu->Pedidos->agregar_pedido(P1);
+														Inscrito->Aumentar();
+														Menu->Restau->contenedor[6]->AumentarRes(total);
 														Finalizar=1;
 														system("cls");
 														cout<<"===========================\n";
@@ -1408,7 +1444,6 @@ void Control::menu_repartidor(){
 								
 								Repartidor *r11 = new Repartidor(nombre, id, num_tel, tarje, est, correo, direc, kilo, amonesta); 
 								Menu->Repartidores->agregar_reparti(r11);
-								Menu->GuardaRepartidores(r11);
 								cout<<"Su usuario fua aniadido exitosamente"<<endl;
 								system("pause");
 								system("cls");
@@ -1674,7 +1709,7 @@ void Control::menu_admin(){
 			case 1:
 				
 				cout<<"Lista de clientes: "<<endl;
-				Menu->LeerClientes();
+				Menu->Clientes->clientes_acti();
 				system("pause");
 				system("cls");
 				break;
@@ -1682,7 +1717,7 @@ void Control::menu_admin(){
 			case 2:
 				
 				cout<<"Lista de repartidores: "<<endl;
-				Menu->LeerRepartidores();
+				Menu->Repartidores->mostrarlistaR();
 				system("pause");
 				system("cls");
 				break;

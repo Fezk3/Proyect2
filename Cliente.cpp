@@ -24,7 +24,7 @@ Cliente::~Cliente() {
 
 void Cliente::Aumentar(){
 	
-	Num_Pedidos++;
+	this-> Num_Pedidos++;
 	
 }
 

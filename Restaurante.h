@@ -45,7 +45,7 @@ public:
 	//methods
 	
 	string tostringRest();
-	
+	void AumentarRes(double);	
 	//archivos
 	
 	void autosave(ofstream&);

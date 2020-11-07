@@ -2,13 +2,13 @@ Popeyes
 5466
 Heredia
 Rapida
-0
+2
 0
 Wendy's
 1235
 Heredia
 Rapida
-0
+1
 0
 Dominos
 6452
@@ -38,5 +38,5 @@ Taco Bell
 9452
 Heredia
 Rapida
-4
-1000
+1
+27120
