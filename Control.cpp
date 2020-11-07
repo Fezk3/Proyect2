@@ -202,7 +202,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"");
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[0]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -290,8 +289,7 @@ void Control::menu_cliente(){
 															total*=1.13;
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"");											
 															P1->set_hora_ini();
-															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar(); 
+															Menu->Pedidos->agregar_pedido(P1); 
 															Menu->Restau->contenedor[1]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -380,7 +378,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[2]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -468,7 +465,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[3]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -556,7 +552,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[4]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -645,7 +640,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[6]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -734,7 +728,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[6]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -895,7 +888,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Popeyes",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[0]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -983,8 +975,7 @@ void Control::menu_cliente(){
 															total*=1.13;
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Wendys",Inscrito->get_direccion(),"En preparacion",conten,total,"");											
 															P1->set_hora_ini();
-															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
+															Menu->Pedidos->agregar_pedido(P1);															
 															Menu->Restau->contenedor[1]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -1072,8 +1063,7 @@ void Control::menu_cliente(){
 															total*=1.13;
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Dominos",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
-															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
+															Menu->Pedidos->agregar_pedido(P1);														
 															Menu->Restau->contenedor[2]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -1162,7 +1152,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Pizza Hut",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[3]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -1251,7 +1240,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Papa Jons",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[4]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -1340,7 +1328,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Bygys",Inscrito->get_direccion(),"En preparacion",conten,total,"");										
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[5]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");
@@ -1429,7 +1416,6 @@ void Control::menu_cliente(){
 															Pedido *P1 = new Pedido(Inscrito->get_cedula(),"Taco Bell",Inscrito->get_direccion(),"En preparacion",conten,total,"");
 															P1->set_hora_ini();
 															Menu->Pedidos->agregar_pedido(P1);
-															Inscrito->Aumentar();
 															Menu->Restau->contenedor[6]->AumentarRes(total);
 															Finalizar=1;
 															system("cls");

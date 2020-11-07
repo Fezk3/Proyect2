@@ -15,7 +15,7 @@ tab_width=4
 tab_use_spaces=0
 explorer_path=.
 inherits_from=
-current_source=main.cpp
+current_source=Interfaz.cpp
 path_char=\
 [source]
 path=main.cpp
@@ -23,7 +23,7 @@ cursor=21:40
 open=true
 [source]
 path=Control.cpp
-cursor=1760:52
+cursor=1417:49
 open=true
 [source]
 path=Restaurante.cpp
@@ -71,7 +71,7 @@ cursor=29:42
 open=true
 [source]
 path=Interfaz.cpp
-cursor=183:1
+cursor=128:1
 open=true
 [source]
 path=Pedido.cpp
