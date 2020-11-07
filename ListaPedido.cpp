@@ -76,7 +76,7 @@ void ListaPedido::hora_pico(){
 	int cont = 0;
 	int hora = 0;
 	
-	if(aux!=NULL){
+	if(aux==NULL){
 		
 		cout<<"Lista de Pedidos vacia"<<endl;
 		
@@ -89,10 +89,8 @@ void ListaPedido::hora_pico(){
 			aux = aux->get_sig_pedido();
 			
 		}
-		
+		cout<<"La hora en la que se realizan mas pedidos es: "<<hora/cont;//h_pico/cont<<endl; 
 	}
-	
-	cout<<"La hora en la que se realizan mas pedidos es: "<<hora/cont;//h_pico/cont<<endl; 
 	
 }
 

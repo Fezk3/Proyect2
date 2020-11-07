@@ -15,7 +15,7 @@ tab_width=4
 tab_use_spaces=0
 explorer_path=.
 inherits_from=
-current_source=ListaPedido.cpp
+current_source=main.cpp
 path_char=\
 [source]
 path=main.cpp
@@ -43,7 +43,7 @@ cursor=147:27
 open=true
 [source]
 path=ListaPedido.cpp
-cursor=76:4
+cursor=91:67
 open=true
 [source]
 path=ListaReparti.cpp
