@@ -36,6 +36,8 @@ public:
 	void guardar_listas();
 	void cargar_lista_cliente();
 	void cargar_lista_reparti();
+	void guardar_restau();
+	void cargar_restau();
 	
 };
 

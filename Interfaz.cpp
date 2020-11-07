@@ -308,3 +308,35 @@ void Interfaz::cargar_lista_reparti(){
 	delete aux1;
 	
 }
+
+void Interfaz::guardar_restau(){
+	
+	ofstream res;
+	
+	res.open("restau.txt");
+	
+	Restaurante *aux;
+	
+	for(int i=0;i<7;i++){
+		
+		aux = Restau->contenedor[i];
+		Restaurante *r = aux;
+		r->autosave(res);
+		delete r;
+		
+	}
+	
+	res.close();
+	
+	delete aux;
+	
+	
+}
+
+void Interfaz::cargar_restau(){
+	
+	
+	
+	
+	
+}

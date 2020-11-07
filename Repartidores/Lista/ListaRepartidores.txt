@@ -106,3 +106,15 @@ Numero de amonestaciones: 0
 
 =================================================================
 
+Nombre: ghjgh
+Cedula: 123
+Numero telefonico: jjk
+Numero de tarjeta: fdgdf
+Estado: Ocupado
+Correo: dfgdf
+Direccion: fg
+Numero de kms diario: 0
+Numero de amonestaciones: 0
+
+=================================================================
+

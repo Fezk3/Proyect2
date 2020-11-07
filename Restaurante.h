@@ -2,6 +2,7 @@
 #define RESTAURANTE_H
 #include <iostream>
 #include <sstream>
+#include <fstream>
 #include "ContenedorCombo.h"
 
 using namespace std;
@@ -19,7 +20,8 @@ private:
 	
 public:
 	
-	Restaurante(string nombre, string ced_juridica, string direcc, string tipo_comida, int cant_pedidos);
+	Restaurante();
+	Restaurante(string nombre, string ced_juridica, string direcc, string tipo_comida, int cant_pedidos, double total);
 	~Restaurante();
 	
 	//sets
@@ -43,6 +45,11 @@ public:
 	//methods
 	
 	string tostringRest();
+	
+	//archivos
+	
+	void autosave(ofstream&);
+	Restaurante& autoread(ifstream&);
 	
 };
 

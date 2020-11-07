@@ -6,11 +6,11 @@ const int x = 7;
 
 class ContenedorRest{
 	
-private:
+public:
 	
 	Restaurante *contenedor[x];
 	
-public:
+
 	
 	ContenedorRest();
 	~ContenedorRest();

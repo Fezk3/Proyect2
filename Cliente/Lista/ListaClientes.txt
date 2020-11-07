@@ -66,3 +66,25 @@ Pedidos realizados: 0
 
 =================================================================
 
+Nombre: fghfgh
+Cedula: 12
+Numero telefonico: hjghj
+Numero de tarjeta: jhjgh
+Estado: Disponible
+Correo: jghjghj
+Direccion: jghjhgj
+Pedidos realizados: 0
+
+=================================================================
+
+Nombre: fgdfg
+Cedula: 1
+Numero telefonico: fgdfg
+Numero de tarjeta: fdgdfg
+Estado: Disponible
+Correo: dfg
+Direccion: dfg
+Pedidos realizados: 0
+
+=================================================================
+

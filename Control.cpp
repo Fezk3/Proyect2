@@ -1453,7 +1453,7 @@ void Control::menu_repartidor(){
 							
 							if(op2=="1"){  //si acepta el pedido
 								
-								if(uwu->get_num_amonesta() > 4 || uwu->get_estado()==false){ 
+								if(uwu->get_num_amonesta() > 4){ 
 									
 									cout<<"Lo sentimos, pero debido a su numero de amonestaciones no puede realizar entregas"<<endl;
 									system("pause");
@@ -1890,6 +1890,7 @@ void Control::guardarlistas(){
 			if(op=="1"){
 				
 				Menu->guardar_listas();
+				Menu->guardar_restau();
 				cout<<"Listas guardadas con exito"<<endl;
 				system("pause");
 				system("cls");

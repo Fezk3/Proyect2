@@ -1,14 +1,25 @@
 #include "Restaurante.h"
 
-Restaurante::Restaurante(string nombre, string ced_juridica, string direcc, string tipo_comida, int cant_pedidos) {
+Restaurante::Restaurante(string nombre, string ced_juridica, string direcc, string tipo_comida, int cant_pedidos, double total) {
 	
 	this->nombre = nombre;
 	this->ced_juridica = ced_juridica;
 	this->direcc = direcc;
 	this->tipo_comida = tipo_comida;
 	this->cant_pedidos = cant_pedidos;
-	this->total = 0;
+	this->total = total;
 
+}
+
+Restaurante::Restaurante(){
+	
+	nombre = "";
+	ced_juridica = "";
+	direcc = "";
+	tipo_comida = "";
+	cant_pedidos = 0;
+	total = 0;
+	
 }
 
 Restaurante::~Restaurante() {
@@ -102,16 +113,38 @@ string Restaurante::tostringRest() {
 	x << "Direccion: " << get_direcc() << endl;
 	x << "Tipo de comida: " << get_tipo_comida() << "\n\n";
 	
-	/*
-	x << "Combos: " << "\n\n";
-	
-	for (int i = 0;i < 9;i++) {
-		
-		x << "Combo: " << i + 1 << "	 Precio: " << combos[i] << endl;
-		
-	}
-	*/
-	
 	return x.str();
 	
 }
+
+void Restaurante::autosave(ofstream&z){
+	
+	z << nombre << endl;
+	z << ced_juridica << endl;
+	z << direcc << endl;
+	z << tipo_comida << endl;
+	z << cant_pedidos << endl;
+	z << total <<endl;
+	
+}
+
+Restaurante& Restaurante::autoread(ifstream&z){
+	
+	string nombre1, ced_juridica1, direcc1, tipo_comida1;
+	int cant_pedidos1;
+	double total1;
+	
+	getline(z, nombre1);
+	z >> ced_juridica1;
+	z >> direcc1;
+	z >> tipo_comida1;
+	z >> cant_pedidos1;
+	z >> total1;
+	
+	z.ignore();
+	
+	return(*new Restaurante(nombre1, ced_juridica1, direcc1, tipo_comida1, cant_pedidos1, total1));
+	
+}
+
+

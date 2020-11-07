@@ -1,0 +1,42 @@
+Popeyes
+5466
+Heredia
+Rapida
+0
+0
+Wendy's
+1235
+Heredia
+Rapida
+0
+0
+Dominos
+6452
+Heredia
+Rapida
+0
+0
+Pizza Hut
+8764
+Heredia
+Rapida
+0
+0
+Papa Johns
+0565
+Heredia
+Rapida
+0
+0
+Buggies
+7385
+Heredia
+Rapida
+0
+0
+Taco Bell
+9452
+Heredia
+Rapida
+0
+0
