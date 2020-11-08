@@ -105,7 +105,7 @@ void Control::menu_cliente(){
 		cout<<"==========================================\n";
 		cout<<"Espere mientras ingresa al menu...\n";
 		cout<<"==========================================\n";
-		Sleep(3600);
+		Sleep(1600);
 		Cliente *c11 = new Cliente(Nombre,verificar,NumTel,NumTarje,true,Correo,Ubica,0);
 		Menu->Clientes->Agregar(c11);
 		
@@ -1480,10 +1480,7 @@ void Control::menu_cliente(){
 
 void Control::menu_repartidor(){
 	
-	//costos de envio
-	
 	const int costo_km_habil = 1000;
-	//const int costo_km_feria = 1500;
 	
 	srand(time(NULL));
 	
@@ -1492,7 +1489,6 @@ void Control::menu_repartidor(){
 	string op2, op3, op4, op5, op6;
 	
 	string op;	
-	string hora;
 	
 	//variables para Repartidor nuevo
 	
@@ -1512,7 +1508,7 @@ void Control::menu_repartidor(){
 	
 	do{
 		
-		cout<<"Bienvenido a CletaEats: "<<endl;
+		cout<<"Bienvenido a CletaEats: \n"<<endl;
 		cout<<"Digite 1 para iniciar session"<<endl;
 		cout<<"Digite 2 para salir"<<endl;
 		cin>>iwi;
@@ -1539,8 +1535,10 @@ void Control::menu_repartidor(){
 					if(Menu->Repartidores->buscar_reparti(id)==false){
 						
 						cout<<"Usted aun no esta registrado en la app, desea registrarse?"<<endl;
-						cout<<"Digite 1 para registrarse o 2 para salir"<<endl;
+						cout<<"\nDigite 1 para registrarse o 2 para salir"<<endl;
 						cin>>op;
+						system("pause");
+						system("cls");
 						
 						try{
 							
@@ -1598,7 +1596,7 @@ void Control::menu_repartidor(){
 						system("cls");
 						
 						cout<<"Desea aceptar un pedido?"<<endl;
-						cout<<"Digite 1 para si o 2 para no: "<<endl;
+						cout<<"\nDigite 1 para si o 2 para no: "<<endl;
 						cin>>op2;
 						system("pause");
 						system("cls");
@@ -1622,7 +1620,6 @@ void Control::menu_repartidor(){
 									
 								}
 								
-								//Pedido *owo = Menu->Pedidos->pedido();
 								precio = owo->get_precio();  //obtengo precio del pedido
 								cout<<"El pedido disponible para aceptar la entrega es: "<<owo->tostring_pedido()<<endl;
 								cout<<"\nDigite 1 para aceptarlo o 2 para rechazarlo: "<<endl;
@@ -1643,7 +1640,7 @@ void Control::menu_repartidor(){
 									if(op3=="1"){
 										uwu->set_estado(true);
 										owo->set_id_reparti(uwu->get_cedula());
-										cout<<"Desea pasar el estado del pedido a: En camino  "<<endl;
+										cout<<"Desea pasar el estado del pedido a: En camino  \n"<<endl;
 										cout<<"1: SI || 2.NO"<<endl;
 										cin>>op4;
 										system("pause");
@@ -1682,6 +1679,8 @@ void Control::menu_repartidor(){
 									}else{
 										
 										cout<<"Usted ha rechazado el pedido"<<endl;
+										system("pause");
+										system("cls");
 										break;
 										
 									}
@@ -1740,8 +1739,6 @@ void Control::menu_repartidor(){
 								precio+=tot;
 								owo->set_precio(precio);
 								owo->set_estado("Entregado");
-								//cout<<"Digite la hora en la que entrego el pedido: "<<endl;
-								//getline(cin, hora);
 								owo->set_hora_fin();
 								
 								Menu->GuardaPedidos(owo->get_id_clie(),owo);
@@ -1781,6 +1778,8 @@ void Control::menu_repartidor(){
 			}else{
 				
 				cout<<"Saliendo"<<endl;
+				system("pause");
+				system("cls");
 				break;
 				
 			}
@@ -1806,24 +1805,25 @@ void Control::menu_admin(){
 		
 		cout<<"Escoga la accion que desea realizar: "<<endl;
 		
-		cout<<"\n1. Ver la lista de clientes"<<endl;
-		cout<<"2. Ver la lista de repartidores"<<endl;
-		cout<<"3. Ver los pedidos de un cliente en especifico"<<endl;
-		cout<<"4. Ver la lista de quejas de un repartidor en especifico"<<endl;
-		cout<<"5. Ver Restaurante con mayor numero de envios"<<endl;
-		cout<<"6. Ver Restaurante con menor numero de envios"<<endl;
-		cout<<"7. Ver el total de dinero vendido por cada Restaurante"<<endl;
-		cout<<"8. Ver Total vendido por todos los Restaurantes"<<endl;
-		cout<<"9. Ver cliente con mas pedidos"<<endl;
-		cout<<"10. Ver hora en la que se realizaron mas pedidos"<<endl;
-		cout<<"11. Salir"<<endl;
+		cout<<"\n1.Ver la lista de clientes activos"<<endl;
+		cout<<"2.Ver la lista de clientes suspendidos"<<endl;
+		cout<<"3.Ver la lista de repartidores"<<endl;
+		cout<<"4.Ver los pedidos de un cliente en especifico"<<endl;
+		cout<<"5.Ver la lista de quejas de un repartidor en especifico"<<endl;
+		cout<<"6.Ver Restaurante con mayor numero de envios"<<endl;
+		cout<<"7.Ver Restaurante con menor numero de envios"<<endl;
+		cout<<"8.Ver el total de dinero vendido por cada Restaurante"<<endl;
+		cout<<"9.Ver Total vendido por todos los Restaurantes"<<endl;
+		cout<<"10.Ver cliente con mas pedidos"<<endl;
+		cout<<"11.Ver hora en la que se realizaron mas pedidos"<<endl;
+		cout<<"12.Salir"<<endl;
 		cin>>op;
 		system("pause");
 		system("cls");
 		
 		try{
 			
-			if(op!="1"&&op!="2"&&op!="3"&&op!="4"&&op!="5"&&op!="6"&&op!="7"&&op!="8"&&op!="9"&&op!="10"&&op!="11"){
+			if(op!="1"&&op!="2"&&op!="3"&&op!="4"&&op!="5"&&op!="6"&&op!="7"&&op!="8"&&op!="9"&&op!="10"&&op!="11"&&op!="12"){
 				
 				throw(op);
 				
@@ -1833,7 +1833,7 @@ void Control::menu_admin(){
 				
 			case 1:
 				
-				cout<<"Lista de clientes: "<<endl;
+				cout<<"Lista de clientes activos: \n"<<endl;
 				Menu->Clientes->clientes_acti();
 				system("pause");
 				system("cls");
@@ -1841,13 +1841,21 @@ void Control::menu_admin(){
 				
 			case 2:
 				
-				cout<<"Lista de repartidores: "<<endl;
-				Menu->Repartidores->mostrarlistaR();
+				cout<<"Lista de clientes suspendidos: \n"<<endl;
+				Menu->Clientes->clientes_suspen();
 				system("pause");
 				system("cls");
 				break;
 				
 			case 3:
+				
+				Menu->Repartidores->mostrarlistaR();
+				cout<<"\n";
+				system("pause");
+				system("cls");
+				break;
+				
+			case 4:
 				
 				cout<<"Para ver los pedidos de un cliente, digite el id de dicho cliente: "<<endl;
 				cin>>id;
@@ -1868,29 +1876,28 @@ void Control::menu_admin(){
 					
 				}
 				
-			case 4:
-				   
-				   cout<<"Para ver la lista de quejas de un repartidor, digite el id de dicho repartidor"<<endl;
-				   cin>>id;
-				   
-				   if(Menu->Repartidores->checkR(id)==true){
-					   
-					   Menu->leer_queja(id);
-					   system("pause");
-					   system("cls");
-					   break;
-					   
-					   
-				   }else{
-					   
-					   cout<<"Cedula de repartidor no registrada"<<endl;
-					   break;
-					   
-				   }
-				   
-				   break;
-				   
 			case 5:
+				
+				cout<<"Para ver la lista de quejas de un repartidor, digite el id de dicho repartidor"<<endl;
+				cin>>id;
+				
+				if(Menu->Repartidores->checkR(id)==true){
+					
+					Menu->leer_queja(id);
+					system("pause");
+					system("cls");
+					break;
+					
+				}else{
+					
+					cout<<"Cedula de repartidor no registrada"<<endl;
+					break;
+					
+				}
+				
+				break;
+				
+			case 6:
 				
 				cout<<"El restaurante con mas pedidos es: "<<Menu->Restau->mas_pedidos()<<endl;
 				
@@ -1899,7 +1906,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 6:
+			case 7:
 				
 				cout<<"El resturante con menos pedidos es: "<<Menu->Restau->menos_pedidos()<<endl;
 				
@@ -1908,9 +1915,9 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 7:
+			case 8:
 				
-				cout<<"Detalle del total vendido por cada Restaurante: "<<endl;
+				cout<<"Detalle del total vendido por cada Restaurante: \n"<<endl;
 				
 				cout<<Menu->Restau->total_resta();
 				
@@ -1919,7 +1926,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 8:
+			case 9:
 				
 				cout<<"El total de dinero recaudado por todos los restaurantes es de: "<<Menu->Restau->total_all()<<endl;
 				
@@ -1928,7 +1935,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 9:
+			case 10:
 				
 				cout<<"El cliente con mas pedidos es: "<<endl;
 				
@@ -1939,7 +1946,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 10:
+			case 11:
 				
 				Menu->Pedidos->hora_pico();
 				cout<<"\n"<<endl;
@@ -1949,7 +1956,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 11:
+			case 12:
 				
 				cout<<"Saliendo..."<<endl;
 				system("pause");
@@ -2027,7 +2034,7 @@ void Control::guardarlistas(){
 	
 	do{
 		
-		cout<<"Desea guardar las listas utilizadas en esta seccion?"<<endl;
+		cout<<"Desea guardar las listas utilizadas en esta sesion?"<<endl;
 		cout<<"1. Si     ||      2. No"<<endl;
 		cin>>op;
 		system("pause");
@@ -2077,7 +2084,7 @@ void Control::cargarlistas(){
 	
 	do{
 		
-		cout<<"Desea cargar las listas de Clientes y Repartidores almacenadas?"<<endl;
+		cout<<"Desea cargar las listas almacenadas?"<<endl;
 		cout<<"1. Si     ||      2. No"<<endl;
 		cin>>op;
 		system("pause");

@@ -105,7 +105,7 @@ void ListaClientes::clientes_suspen(){
 	
 	if(aux == NULL){
 		
-		cout<<"No hay clientes activos"<<endl;
+		cout<<"No hay clientes suspendidos"<<endl;
 		
 	}else{
 		
