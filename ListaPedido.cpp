@@ -116,6 +116,8 @@ Pedido *ListaPedido::pedido(){
 		
 	}
 	
+	return NULL;
+	
 }
 bool ListaPedido::verifica_estado(string id){
 	

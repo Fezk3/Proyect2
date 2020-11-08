@@ -1553,7 +1553,7 @@ void Control::menu_repartidor(){
 								
 								Repartidor *r11 = new Repartidor(nombre, id, num_tel, tarje, est, correo, direc, kilo, amonesta); 
 								Menu->Repartidores->agregar_reparti(r11);
-								cout<<"Su usuario fua aniadido exitosamente"<<endl;
+								cout<<"Su usuario fue aniadido exitosamente"<<endl;
 								system("pause");
 								system("cls");
 								break;
@@ -1586,6 +1586,15 @@ void Control::menu_repartidor(){
 						cin>>op2;
 						system("pause");
 						system("cls");
+						
+						if(owo==NULL){
+							
+							cout<<"No hay pedidos deisponibles"<<endl;
+							system("pause");
+							system("cls");
+							break;
+							
+						}
 						
 						try{  //arreglar
 							
@@ -1793,7 +1802,7 @@ void Control::menu_admin(){
 		
 		cout<<"\n1.Ver la lista de clientes activos"<<endl;
 		cout<<"2.Ver la lista de clientes suspendidos"<<endl;
-		cout<<"3.Ver la lista de repartidores"<<endl;
+		cout<<"3.Ver la lista de repartidores con 0 amonestaciones"<<endl;
 		cout<<"4.Ver los pedidos de un cliente en especifico"<<endl;
 		cout<<"5.Ver la lista de quejas de un repartidor en especifico"<<endl;
 		cout<<"6.Ver Restaurante con mayor numero de envios"<<endl;
