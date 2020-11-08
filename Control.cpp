@@ -1587,7 +1587,7 @@ void Control::menu_repartidor(){
 						system("pause");
 						system("cls");
 						
-						if(owo==NULL){
+						if(owo==NULL){  //si no hay pedidos para aceptar
 							
 							cout<<"No hay pedidos deisponibles"<<endl;
 							system("pause");
@@ -1805,20 +1805,21 @@ void Control::menu_admin(){
 		cout<<"3.Ver la lista de repartidores con 0 amonestaciones"<<endl;
 		cout<<"4.Ver los pedidos de un cliente en especifico"<<endl;
 		cout<<"5.Ver la lista de quejas de un repartidor en especifico"<<endl;
-		cout<<"6.Ver Restaurante con mayor numero de envios"<<endl;
-		cout<<"7.Ver Restaurante con menor numero de envios"<<endl;
-		cout<<"8.Ver el total de dinero vendido por cada Restaurante"<<endl;
-		cout<<"9.Ver Total vendido por todos los Restaurantes"<<endl;
-		cout<<"10.Ver cliente con mas pedidos"<<endl;
-		cout<<"11.Ver hora en la que se realizaron mas pedidos"<<endl;
-		cout<<"12.Salir"<<endl;
+		cout<<"6.Ver la lista de los 7 restaurantes disponibles con sus especificaiones"<<endl;
+		cout<<"7.Ver Restaurante con mayor numero de envios"<<endl;
+		cout<<"8.Ver Restaurante con menor numero de envios"<<endl;
+		cout<<"9.Ver el total de dinero vendido por cada Restaurante"<<endl;
+		cout<<"10.Ver Total vendido por todos los Restaurantes"<<endl;
+		cout<<"11.Ver cliente con mas pedidos"<<endl;
+		cout<<"12.Ver hora en la que se realizaron mas pedidos"<<endl;
+		cout<<"13.Salir"<<endl;
 		cin>>op;
 		system("pause");
 		system("cls");
 		
 		try{
 			
-			if(op!="1"&&op!="2"&&op!="3"&&op!="4"&&op!="5"&&op!="6"&&op!="7"&&op!="8"&&op!="9"&&op!="10"&&op!="11"&&op!="12"){
+			if(op!="1"&&op!="2"&&op!="3"&&op!="4"&&op!="5"&&op!="6"&&op!="7"&&op!="8"&&op!="9"&&op!="10"&&op!="11"&&op!="12"&&op!="13"){
 				
 				throw(op);
 				
@@ -1894,6 +1895,14 @@ void Control::menu_admin(){
 				
 			case 6:
 				
+				cout<<"Listado de todos los restauranes inscritos: \n\n";
+				cout<<Menu->Restau->listado_resta();
+				system("pause");
+				system("cls");
+				break;
+				
+			case 7:
+				
 				cout<<"El restaurante con mas pedidos es: "<<Menu->Restau->mas_pedidos()<<endl;
 				
 				system("pause");
@@ -1901,7 +1910,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 7:
+			case 8:
 				
 				cout<<"El resturante con menos pedidos es: "<<Menu->Restau->menos_pedidos()<<endl;
 				
@@ -1910,7 +1919,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 8:
+			case 9:
 				
 				cout<<"Detalle del total vendido por cada Restaurante: \n"<<endl;
 				
@@ -1921,7 +1930,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 9:
+			case 10:
 				
 				cout<<"El total de dinero recaudado por todos los restaurantes es de: "<<Menu->Restau->total_all()<<endl;
 				
@@ -1930,7 +1939,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 10:
+			case 11:
 				
 				cout<<"El cliente con mas pedidos es: "<<endl;
 				
@@ -1941,7 +1950,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 11:
+			case 12:
 				
 				Menu->Pedidos->hora_pico();
 				cout<<"\n"<<endl;
@@ -1951,7 +1960,7 @@ void Control::menu_admin(){
 				
 				break;
 				
-			case 12:
+			case 13:
 				
 				cout<<"Saliendo..."<<endl;
 				system("pause");
@@ -1975,7 +1984,7 @@ void Control::menu_admin(){
 		}
 		
 		
-	} while(op!="11");	
+	} while(op!="13");	
 	
 }
 void Control::menu_quejas(string ID){
