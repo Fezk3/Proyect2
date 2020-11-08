@@ -2,21 +2,7 @@
 
 Control::Control(){
 	
-	/*Cliente* c1 = new Cliente("Emanuel","402540125","8798746","9999w",true,"Ema2821@gmail.com","Heredia",5);
-	Cliente* c2 = new Cliente("Jose","902540125","4646468","9999w",false,"Joseam89@gmail.com","Heredia",9);
-	Cliente* c3 = new Cliente("Marcos","202540125","65465412","9999w",true,"marsa46@gmail.com","Heredia",4);
-	
-	Repartidor* r1 = new Repartidor("Victor", "4654564", "24586", "5asd4", true, "vict@gmail.com", "Palmares", 7.3, 0);
-	Repartidor* r2 = new Repartidor("Kevin", "465454", "34586", "234d4", false, "kev@gmail.com", "Heredia", 2.3, 2);
-	Repartidor* r3 = new Repartidor("Warner", "4gseg564", "14586", "53gd4", false, "war@gmail.com", "San Jose", 1.3, 4);
-	
-	Pedido* p1 = new Pedido("402540125","Popeyes",c1->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:12","_:_","4654564");
-	Pedido* p2 = new Pedido("902540125","Popeyes",c2->get_direccion(),"Entregado","8x Alitas 6000\n",6780,"11:12","12:30","4654564");
-	Pedido* p3 = new Pedido("202540125","Popeyes",c3->get_direccion(),"Entregado","4x Alitas 4000\n",4520,"11:55","01:00","4654564");*/
-	
-	
 	Menu = new Interfaz();
-	
 	
 }
 void Control::menu_cliente(){
