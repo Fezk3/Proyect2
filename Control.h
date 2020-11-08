@@ -5,9 +5,13 @@
 #include "Interfaz.h"
 
 class Control{
+	
 private:
+	
 	Interfaz *Menu;
+	
 public:
+	
 	Control();
 	void menu_cliente();
 	void menu_repartidor();

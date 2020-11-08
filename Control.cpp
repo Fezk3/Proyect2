@@ -1536,8 +1536,6 @@ void Control::menu_repartidor(){
 							
 							if(op=="1"){  //Pidiendo info del repartidor NUEVO
 								
-								cout<<"Escriba su id: "<<endl;
-								cin>>id;
 								cout<<"Escriba su nombre: "<<endl;
 								cin>>nombre;
 								cout<<"Escriba su numero de telefono: "<<endl;
