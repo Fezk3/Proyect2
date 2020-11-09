@@ -181,7 +181,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");;
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -197,7 +198,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"\nGracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -269,7 +271,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -285,7 +288,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -357,7 +361,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -373,7 +378,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 														}
 														break;
 													}
@@ -444,7 +450,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -460,7 +467,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 														}
 														break;
 													}
@@ -531,7 +539,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -547,7 +556,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"\nGracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -619,7 +629,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -635,7 +646,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -707,7 +719,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -723,7 +736,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -754,13 +768,15 @@ void Control::menu_cliente(){
 					case 2:
 						cout<<"====================================\n";
 						menu_quejas(Inscrito->get_cedula());				
-						Sleep(1600);
+						system("pause");
+						system("cls");
 						break;
 					case 3:
 						cout<<"====================================\n";
 						cout<<"Saliendo...\n";
 						cout<<"====================================\n";						
-						Sleep(1600);
+						system("pause");
+						system("cls");
 						salir=1;
 						break;
 					}
@@ -867,7 +883,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -883,7 +900,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -955,7 +973,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -971,7 +990,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"\nGracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -1043,7 +1063,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -1059,7 +1080,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -1131,7 +1153,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -1147,7 +1170,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(3600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -1219,7 +1243,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -1235,7 +1260,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -1307,7 +1333,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -1323,7 +1350,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -1395,7 +1423,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Saliendo...\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															Finalizar=1;
 														}else{
 															total*=1.13;
@@ -1411,7 +1440,8 @@ void Control::menu_cliente(){
 															cout<<"===========================\n";
 															cout<<"Gracias por su compra!\n";
 															cout<<"===========================\n";
-															Sleep(1600);
+															system("pause");
+															system("cls");
 															salir=1;
 														}
 														break;
@@ -1442,13 +1472,15 @@ void Control::menu_cliente(){
 					case 2:
 						cout<<"====================================\n";
 						menu_quejas(Inscrito->get_cedula());				
-						Sleep(1600);
+						system("pause");
+						system("cls");
 						break;
 					case 3:
 						cout<<"====================================\n";
 						cout<<"Saliendo...\n";
 						cout<<"====================================\n";						
-						Sleep(1600);
+						system("pause");
+						system("cls");
 						salir=1;
 						break;
 					}
@@ -1614,7 +1646,7 @@ void Control::menu_repartidor(){
 								}
 								
 								precio = owo->get_precio();  //obtengo precio del pedido
-								cout<<"El pedido disponible para aceptar la entrega es: "<<owo->tostring_pedido()<<endl;
+								cout<<"El pedido disponible para aceptar la entrega es: \n"<<owo->tostring_pedido()<<endl;
 								cout<<"\nDigite 1 para aceptarlo o 2 para rechazarlo: "<<endl;
 								cin>>op3;
 								system("pause");
@@ -1633,6 +1665,7 @@ void Control::menu_repartidor(){
 									if(op3=="1"){
 										uwu->set_estado(true);
 										owo->set_id_reparti(uwu->get_cedula());
+										a:
 										cout<<"Desea pasar el estado del pedido a: En camino  \n"<<endl;
 										cout<<"1: SI || 2.NO"<<endl;
 										cin>>op4;
@@ -1656,6 +1689,9 @@ void Control::menu_repartidor(){
 											}else{
 												
 												cout<<"Esperando a que pase a en camino"<<endl;
+												system("pause");
+												system("cls");
+												goto a;
 												
 											}
 											
@@ -1727,7 +1763,7 @@ void Control::menu_repartidor(){
 								uwu->set_num_kms_diario(km);  //aumento de los km recorridos
 								
 								cout<<"Usted ha pasado el estado del pedido a entregado: "<<endl;
-								cout<<"El numero de Kilometros recorridos fue de: "<<kem<<endl;
+								cout<<"\nEl numero de Kilometros recorridos fue de: "<<kem<<endl;
 								cout<<"Monto de los Kilometros recorridos: "<<tot<<endl;
 								precio+=tot;
 								owo->set_precio(precio);
@@ -1736,9 +1772,9 @@ void Control::menu_repartidor(){
 								
 								Menu->GuardaPedidos(owo->get_id_clie(),owo);
 								
-								uwu->set_estado(false);
+								uwu->set_estado(true);
 								
-								cout<<"\n\nLos "<<tot<<" seran depositados en su tarjeta n:"<<uwu->get_num_tarje()<<endl;
+								cout<<"\nLos "<<tot<<" seran depositados en su tarjeta n:"<<uwu->get_num_tarje()<<endl;
 								system("pause");
 								system("cls");
 								break;
@@ -1885,6 +1921,8 @@ void Control::menu_admin(){
 				}else{
 					
 					cout<<"Cedula de repartidor no registrada"<<endl;
+					system("pause");
+					system("cls");
 					break;
 					
 				}
@@ -2007,20 +2045,22 @@ void Control::menu_quejas(string ID){
 		cout<<"================================\n";
 		cout<<"No ha realizado ningun Pedido\n";
 		cout<<"================================\n";
-		Sleep(1600);
+		system("pause");
+		system("cls");
 	}else{
 		string id_repa = Queja->get_id_reparti();
+		fflush(stdin);
 		cout<<"Presentacion: ";
-		cin>>Num;
+		getline(cin, Num);
 		contenido.append("Presentacion: "+Num+"\n");
 		cout<<"Amabilidad: ";
-		cin>>Num;
+		getline(cin, Num);
 		contenido.append(" Amabilidad: "+Num+"\n");
 		cout<<"Tiempo de espera: ";
-		cin>>Num;
+		getline(cin, Num);
 		contenido.append(" Tiempo de espera: "+Num+"\n");
 		cout<<"General: ";
-		cin>>Num;
+		getline(cin, Num);
 		contenido.append(" General: "+Num+"\n");
 		Menu->queja(id_repa,contenido);
 		Repartidor* Amonestar=Menu->Repartidores->userR(id_repa);

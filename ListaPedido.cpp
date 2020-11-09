@@ -78,7 +78,7 @@ void ListaPedido::hora_pico(){
 	
 	if(aux==NULL){
 		
-		cout<<"Lista de Pedidos vacia"<<endl;
+		cout<<"Lista de Pedidos vacia, aun no se puede determinar la hora"<<endl;
 		
 	}else{
 		

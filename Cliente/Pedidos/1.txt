@@ -1,2 +1,19 @@
 
 
+Id: 1
+Cliente: 1
+Repartidor: 123
+Direccion: Heredia
+Restaurante: Taco Bell
+Estado: Entregado
+Pedido: 
+WOMBO COMBO                  Precio: 12000
+WOMBO COMBO                  Precio: 12000
+
+Total a pagar con IVA: 31120
+
+Hora de preparacion: 17:50
+Hora de entrega: 17:51
+
+=================================================================
+

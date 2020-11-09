@@ -148,7 +148,8 @@ string Pedido::tostring_pedido() {  //concatenar el combo en main y enviarlo
 	x << "Restaurante: "<<get_nombre_rest() << endl;
 	x << "Estado: " << get_estado() << endl;
 	x << "Pedido: \n" << get_contenido() << endl;
-	x << "Hora de preparacion: " << hora_inicio << endl;
+	x << "Total a pagar con IVA: "<< get_precio()<<endl;
+	x << "\nHora de preparacion: " << hora_inicio << endl;
 	x << "Hora de entrega: " << hora_final << endl;
 
 	return x.str();
