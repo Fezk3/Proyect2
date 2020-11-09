@@ -1599,7 +1599,6 @@ void Control::menu_repartidor(){
 							cout<<"Opcion invalida"<<endl;
 							system("pause");
 							system("cls");
-							break;
 							
 						}
 						
@@ -1701,7 +1700,6 @@ void Control::menu_repartidor(){
 											cout<<"Opcion invalida"<<endl;
 											system("pause");
 											system("cls");
-											break;
 											
 										}
 										
@@ -1720,7 +1718,6 @@ void Control::menu_repartidor(){
 									cout<<"Opcion invalida"<<endl;
 									system("pause");
 									system("cls");
-									break;
 									
 								}
 								
@@ -1796,7 +1793,6 @@ void Control::menu_repartidor(){
 							cout<<"Opcion invalida"<<endl;
 							system("pause");
 							system("cls");
-							break;
 							
 						}//pasar a suspendido o entregado
 						
