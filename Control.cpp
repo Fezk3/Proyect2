@@ -105,6 +105,7 @@ void Control::menu_cliente(){
 			cout<<"====================================\n";
 			cout<<"Opcion:  ";
 			cin>>menu;
+			
 			try{
 				if(menu!="1"&&menu!="2"&&menu!="3"){
 					throw menu;
