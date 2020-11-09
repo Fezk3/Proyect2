@@ -794,6 +794,13 @@ void Control::menu_cliente(){
 	}else{
 		do{
 			Cliente *Inscrito = Menu->Clientes->user(verificar);
+			if(Inscrito->get_estado()==false){
+				cout<<"====================================\n";
+				cout<<"Cliente supendido, saliendo al menu..\n";
+				cout<<"====================================\n";
+				system("pause");
+				break;
+			}
 			if(Menu->Pedidos->verifica_estado(Inscrito->get_cedula())==false){
 				cout<<"====================================\n";
 				cout<<" 1. Realizar Pedido\n";
