@@ -128,12 +128,12 @@ string Persona::TostringPer() {
 	
 	if(get_estado() == true) {
 		
-		x << "Estado: Disponible"<< endl;
+		x << "Estado: Disponible || activo"<< endl;
 		
 	}
 	else {
 		
-		x << "Estado: Ocupado" << endl;
+		x << "Estado: Ocupado || suspendido" << endl;
 		
 	}
 	

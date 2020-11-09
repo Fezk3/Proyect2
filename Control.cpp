@@ -106,7 +106,7 @@ void Control::menu_cliente(){
 			cout<<"Opcion:  ";
 			cin>>menu;
 			try{
-				if(menu!="1"&&menu!="2"){
+				if(menu!="1"&&menu!="2"&&menu!="3"){
 					throw menu;
 				}else{
 					switch(stoi(menu)){
@@ -787,7 +787,7 @@ void Control::menu_cliente(){
 				cout<<"Opciono no valida...\n";
 				cout<<"====================================\n";
 			}
-		}while(salir!=1);
+		}while(salir!=1 && menu!="3");
 		
 		
 	}else{

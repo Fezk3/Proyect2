@@ -42,13 +42,15 @@ void Interfaz::LeerPedidos(string id){
 		cout<<"El archivo no se pudo abrir"<<endl;
 		Pedi.close();
 		
-	}
-	
-	while(!Pedi.eof()){
+	}else{
 		
-		getline(Pedi,Escribir);
-		Escribir.append("\n");
-		cout<<Escribir;
+		while(!Pedi.eof()){
+			
+			getline(Pedi,Escribir);
+			Escribir.append("\n");
+			cout<<Escribir;
+		}
+		
 	}
 	
 	Pedi.close();
@@ -88,24 +90,20 @@ void Interfaz::leer_queja(string id){
 	
 	ifstream reclamo("./Repartidores/Quejas/"+id+".txt",ios::in);
 	
-	if(reclamo){
-		
-		cout<<"Archivo inexistente"<<endl;
-		reclamo.close();
-		
-	}
 	
 	if(!reclamo || reclamo.good() == false){
 		
-		cout<<"El archivo no se pudo abrir"<<endl;
+		cout<<"El archivo no existe"<<endl;
 		reclamo.close();
 		
-	}
-	
-	while(!reclamo.eof()){
+	}else{
 		
-		getline(reclamo, impri);
-		cout<<impri<<endl;
+		while(!reclamo.eof()){
+			
+			getline(reclamo, impri);
+			cout<<impri<<endl;
+			
+		}
 		
 	}
 	
